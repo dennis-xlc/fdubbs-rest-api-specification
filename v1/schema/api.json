@@ -1,0 +1,43 @@
+{
+	"kind":"discovery#restDescription",
+	"discoveryVersion":"v1",
+	"id":"@@@:v1",
+	"name":"@@@",
+	"version":"1.0",
+	"title":"@@@",
+	"description":"@@@",
+	"documentationLink":"../spec.md",
+	"protocol":"rest",
+	"rootUrl":"https://api.paypal.com/",
+	"servicePath":"v1/@@@",
+	"auth":{
+		"oauth2":{
+			"scopes":{
+			}
+		}
+	},
+	"resources":{
+		"@@@":{
+			"methods":{
+				"@@@":{
+					"id":"@@@",
+					"path":"@@@",
+					"httpMethod":"@@@",
+					"parameters":{
+						"@@@":{
+							"type":"string",
+							"description":"@@@",
+							"location":"query"
+						}
+
+					},
+					"description": "@@@",
+					"request":{},
+					"response":{},
+					"scopes":[]
+				}
+			}
+		}
+	}
+
+}

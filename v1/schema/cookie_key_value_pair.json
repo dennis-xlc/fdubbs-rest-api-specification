@@ -4,7 +4,6 @@
 	"name": "cookie key_value pair",
 	"description": "cookie key_value pair",
 	"id": "cookie_key_value_pair:v1",
-	"required":true,
 	"properties":{
 		"cookie_name": {
 			"type":"string",

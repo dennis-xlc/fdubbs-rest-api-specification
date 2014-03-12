@@ -13,7 +13,9 @@
 	"auth":{
 		"oauth2":{
 			"scopes":{
-				"http://rest-api-for-fdubbs.herokuapp.com/"
+				"http://rest-api-for-fdubbs.herokuapp.com/":{
+					"description":"restful api"
+				}
 			}
 		}
 	},

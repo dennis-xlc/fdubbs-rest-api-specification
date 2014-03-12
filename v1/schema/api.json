@@ -1,40 +1,51 @@
 {
 	"kind":"discovery#restDescription",
 	"discoveryVersion":"v1",
-	"id":"@@@:v1",
-	"name":"@@@",
+	"id":"fdubbs_rest_api:v1",
+	"name":"fudan bbs rest api",
 	"version":"1.0",
-	"title":"@@@",
-	"description":"@@@",
+	"title":"fudan bbs rest api",
+	"description":"fudan bbs rest api",
 	"documentationLink":"../spec.md",
 	"protocol":"rest",
-	"rootUrl":"https://api.paypal.com/",
-	"servicePath":"v1/@@@",
+	"rootUrl":"http://rest-api-for-fdubbs.herokuapp.com/",
+	"servicePath":"api/v1/",
 	"auth":{
 		"oauth2":{
 			"scopes":{
+				"http://rest-api-for-fdubbs.herokuapp.com/"
 			}
 		}
 	},
 	"resources":{
-		"@@@":{
+		"LoginSession":{
 			"methods":{
-				"@@@":{
-					"id":"@@@",
-					"path":"@@@",
-					"httpMethod":"@@@",
+				"user-login":{
+					"id":"user-login-session.create",
+					"path":"/user/login",
+					"httpMethod":"POST",
 					"parameters":{
-						"@@@":{
+						"user_id":{
 							"type":"string",
-							"description":"@@@",
-							"location":"query"
+							"description":"user id",
+							"location":"form"
+						},
+						"passwd":{
+							"type":"string",
+							"description":"user id",
+							"location":"form"
 						}
 
 					},
-					"description": "@@@",
-					"request":{},
-					"response":{},
-					"scopes":[]
+					"description": "user login",
+					"response":{
+						"type":"object",
+						"description":"login response",
+						"$ref":"login_response.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
 				}
 			}
 		}

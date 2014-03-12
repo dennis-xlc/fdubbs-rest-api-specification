@@ -1,0 +1,36 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema/org/draft-04/hyper-schema",
+    "name":"login response",
+    "description":"login response",
+    "id":"login_response:v1",
+    "properties":{
+        "result_code":{
+            "type":"string",
+            "description":"result code",
+            "enum":[
+                "SUCCESS",
+                "USER_NOT_EXIST",
+                "PASSWD_INCORRECT",
+                "INTERNAL_ERROR"
+            ]
+        },
+        "error_message":{
+            "type":"string",
+            "description":"error message",
+            "enum":[
+                "SUCCESS",
+                "USER_NOT_EXIST",
+                "PASSWD_INCORRECT",
+                "INTERNAL_ERROR"
+            ]
+        },
+        "cookies":{
+            "type":"array",
+            "description":"cookies",
+            "items":{
+                "$ref":"cookie_key_value_pair.json"
+            }
+        }
+    }
+}

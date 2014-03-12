@@ -1,4 +1,4 @@
-This repository contains the documentation and JSON schema specification for a PPaaS Service.
+This repository contains the documentation and JSON schema specification for [Fudan BBS](http://bbs.fudan.edu.cn/).
 
 Documentation
 =============

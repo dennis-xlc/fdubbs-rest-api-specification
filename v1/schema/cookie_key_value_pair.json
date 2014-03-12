@@ -1,0 +1,18 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"name": "cookie key_value pair",
+	"description": "cookie key_value pair",
+	"id": "cookie_key_value_pair:v1",
+	"required":true,
+	"properties":{
+		"cookie_name": {
+			"type":"string",
+			"description": "cookie_name"
+		},
+		"cookie_value": {
+			"type":"string",
+			"description": "cookie_value"
+		}
+	}
+}

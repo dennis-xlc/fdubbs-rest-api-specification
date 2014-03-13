@@ -1,0 +1,41 @@
+Request URL:http://bbs.fudan.edu.cn/bbs/top10
+Request Method:GET
+Status Code:200 OK
+Request Headersview source
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip,deflate,sdch
+Accept-Language:zh-CN,zh;q=0.8
+Connection:keep-alive
+Cookie:utmpnum=1274; utmpkey=45481778; utmpuserid=hidennis
+Host:bbs.fudan.edu.cn
+Referer:http://bbs.fudan.edu.cn/bbs/all
+User-Agent:Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36
+Response Headersview source
+Connection:keep-alive
+Content-Encoding:gzip
+Content-Type:text/xml; charset=gb18030
+Date:Thu, 13 Mar 2014 15:12:17 GMT
+Keep-Alive:timeout=20
+Server:nginx
+Transfer-Encoding:chunked
+
+
+<?xml version="1.0" encoding="gb18030"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/bbs.xsl?v1416"?>
+<bbstop10>
+   <session m='t'>
+      <p>lt  </p>
+      <u>hidennis</u>
+      <f><b>Arch_Compiler</b><b>C</b><b>Database</b><b>Emprise</b><b>Fantasy</b><b>FDU_Software</b><b>Feelings</b><b>FM_Ecommodity</b><b>FM_Ticket</b><b>Geography</b><b>Graduate</b><b>GuangDong</b><b>History</b><b>Java</b><b>Job_Intern</b><b>Job_IT</b><b>Job_Servant</b><b>Joke</b><b>KaoYan</b><b>Lessons</b><b>Love</b><b>M_GuangHua</b><b>M_Library</b><b>M_Zhangjiang</b><b>Mac</b><b>Magpie_Bridge</b><b>MerchantAgent</b><b>MobilePhone</b><b>Movie</b><b>MS_Windows</b><b>Net_Resource</b><b>Network</b><b>News</b><b>NR_Movie</b><b>NR_Music</b><b>NR_TV</b><b>Outdoors</b><b>PIC</b><b>Practice</b><b>Single</b><b>Software_06</b><b>Travel</b><b>TV</b><b>Undergraduate</b><b>Unix</b><b>Virus</b><b>Zone_C.S.</b><b>Zone_Software</b><b>OMTV</b><b>Employees</b><b>FM_PC</b><b>IT</b><b>ZJSecondhand</b><b>Losers</b><b>MyShow</b><b>Teacher</b><b>Badminton</b><b>Heart</b><b>Food</b><b>Photography</b><b>Railway</b><b>Android</b><b>Job_Plaza</b><b>M_Career</b></f>
+   </session>
+   <top board='Marriage' owner='breezejean' count='522' gid='3085707234'>昨天跟闺蜜吃饭听她说小孩读幼儿园的恐怖故事……</top>
+   <top board='Kids' owner='meiguiwan' count='259' gid='857386'>二宝麻麻群 [想法]</top>
+   <top board='ZheJiang' owner='spoonysnail' count='87' gid='3085259323'>版聚报名啦</top>
+   <top board='MobilePhone' owner='SpiritRain' count='75' gid='3085427144'>小米2S 16G 1299天猫官网现在有货</top>
+   <top board='Auto' owner='shlavida' count='54' gid='3085851678'>昨天开出历史上最低油耗</top>
+   <top board='Money' owner='abb' count='45' gid='3085237633'>重温:“非法集资”高法司法解释</top>
+   <top board='Table_Tennis' owner='bijing' count='43' gid='3085178760'>没人灌水了。。。</top>
+   <top board='Employees' owner='Haruno' count='40' gid='5747083'>这年头请个假就跟杨白劳一样</top>
+   <top board='Beauty' owner='wanderlodrol' count='35' gid='576450'>头发好差，求问爱老爷推荐的【柳屋杏仁油】在哪里买哇</top>
+   <top board='Losers' owner='Apang' count='32' gid='3085799773'>k胖</top>
+</bbstop10>

@@ -20,7 +20,7 @@
 		}
 	},
 	"resources":{
-		"LoginSession":{
+		"loginSession":{
 			"methods":{
 				"user-login":{
 					"id":"user-login-session.create",
@@ -44,6 +44,27 @@
 						"type":"object",
 						"description":"login response",
 						"$ref":"login_response.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
+		},
+		"board":{
+			"methods":{
+				"user-login":{
+					"id":"boards.list",
+					"path":"/boards/all",
+					"httpMethod":"GET",
+					"description": "list all boards",
+					"response":{
+						"type":"array",
+						"description":"all boards",
+						"items":{
+							"type":"object",
+							"$ref":"board.json"
+						}
 					},
 					"scopes":[
 						"http://rest-api-for-fdubbs.herokuapp.com/"

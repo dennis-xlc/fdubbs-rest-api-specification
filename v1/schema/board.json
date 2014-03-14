@@ -1,0 +1,45 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"board detail",
+    "description":"board detail",
+    "id":"board:v1",
+    "properties":{
+        "title":{
+            "type":"string",
+            "description":"board title",
+            "required":true
+        },
+        "category":{
+            "type":"string",
+            "description":"board category",
+            "required":true
+        },
+        "description":{
+            "type":"string",
+            "description":"board description",
+            "required":true
+        },
+        "managers":{
+            "type":"array",
+            "description":"board managers",
+            "required":true,
+            "items":{
+                "type":"string",
+                "description":"system user name of the board manager"
+            }
+        },
+        "post_number":{
+            "type":"integer",
+            "description":"total number of postes in the board"
+        },
+        "is_directory":{
+            "type":"boolean",
+            "description":"if the board is a directory which contains sub-board"
+        },
+        "has_unread_post":{
+            "type":"boolean",
+            "description":"if the board contains any unread post to the user"
+        }
+    }
+}

@@ -6,7 +6,7 @@
 	"id": "section_meta_data:v1",
 	"properties":{
 		"section_id": {
-			"type":"integer",
+			"type":"string",
 			"description": "section id"
 		},
 		"section_desc": {

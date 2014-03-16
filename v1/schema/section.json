@@ -5,7 +5,7 @@
     "description":"board detail",
     "id":"section:v1",
     "properties":{
-        "meta_data":{
+        "section_meta_data":{
             "type":"object",
             "$ref":"section_meta_data.json"
         },

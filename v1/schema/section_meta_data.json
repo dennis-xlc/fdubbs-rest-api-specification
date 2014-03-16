@@ -1,0 +1,17 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "section meta data",
+	"description": "section meta data",
+	"id": "section_meta_data:v1",
+	"properties":{
+		"section_id": {
+			"type":"number",
+			"description": "section id"
+		},
+		"section_desc": {
+			"type":"string",
+			"description": "section description"
+		}
+	}
+}

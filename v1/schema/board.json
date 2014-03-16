@@ -5,6 +5,10 @@
     "description":"board detail",
     "id":"board:v1",
     "properties":{
+        "board_id":{
+            "type":"integer",
+            "description":"board id, sometimes there is no way to get this"
+        },
         "title":{
             "type":"string",
             "description":"board title",
@@ -12,10 +16,9 @@
         },
         "category":{
             "type":"string",
-            "description":"board category",
-            "required":true
+            "description":"board category"
         },
-        "description":{
+        "board_desc":{
             "type":"string",
             "description":"board description",
             "required":true

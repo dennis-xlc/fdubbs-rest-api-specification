@@ -13,6 +13,8 @@
                 "SUCCESS",
                 "USER_NOT_EXIST",
                 "PASSWD_INCORRECT",
+                "USER_ID_EMPTY",
+                "PASSWD_EMPTY",
                 "INTERNAL_ERROR"
             ]
         },

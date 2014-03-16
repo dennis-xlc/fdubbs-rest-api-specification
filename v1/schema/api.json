@@ -53,7 +53,7 @@
 		},
 		"board":{
 			"methods":{
-				"user-login":{
+				"list-all-boards":{
 					"id":"boards.list",
 					"path":"/boards/all",
 					"httpMethod":"GET",
@@ -65,6 +65,47 @@
 							"type":"object",
 							"$ref":"board.json"
 						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
+		},
+		"section":{
+			"methods":{
+				"list-all-sections":{
+					"id":"sections.list",
+					"path":"/section",
+					"httpMethod":"GET",
+					"description": "list all sections",
+					"response":{
+						"type":"array",
+						"description":"all sections' meta data",
+						"items":{
+							"type":"object",
+							"$ref":"section_meta_data.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"show-all-boards-in-section":{
+					"id":"boards.list",
+					"path":"section/{section_id}/",
+					"httpMethod":"GET",
+					"parameters":{
+						"section_id":{
+							"type":"integer",
+							"description":"section id"
+						}
+					},
+					"description": "list all boards in secified section",
+					"response":{
+						"type":"object",
+						"description":"section detail",
+						"$ref":"section.json"
 					},
 					"scopes":[
 						"http://rest-api-for-fdubbs.herokuapp.com/"

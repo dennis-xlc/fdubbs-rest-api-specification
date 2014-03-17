@@ -76,7 +76,7 @@
 			"methods":{
 				"list-all-sections":{
 					"id":"sections.list",
-					"path":"/section",
+					"path":"/section/all",
 					"httpMethod":"GET",
 					"description": "list all sections",
 					"response":{

@@ -54,13 +54,34 @@
 		"board":{
 			"methods":{
 				"list-all-boards":{
-					"id":"boards.list",
+					"id":"all_boards.list",
 					"path":"/boards/all",
 					"httpMethod":"GET",
 					"description": "list all boards",
 					"response":{
 						"type":"array",
 						"description":"all boards",
+						"items":{
+							"type":"object",
+							"$ref":"board.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"list-user-favorite-boards":{
+					"id":"user_favorite_boards.list",
+					"path":"/boards/favor",
+					"httpMethod":"GET",
+					"description": "list all favor boards of the user",
+					"request":{
+						"type":"object",
+						"$ref":"user_cookies_info.json"
+					},
+					"response":{
+						"type":"array",
+						"description":"all favor boards of the user",
 						"items":{
 							"type":"object",
 							"$ref":"board.json"

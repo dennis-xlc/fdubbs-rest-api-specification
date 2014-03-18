@@ -21,6 +21,8 @@ Keep-Alive:timeout=20
 Server:nginx
 Transfer-Encoding:chunked
 
+<html><head><title>发生错误</title></head><body><div>参数错误</div><a href=javascript:history.go(-1)>快速返回</a></body></html>
+/html/body/div
 
 <?xml version="1.0" encoding="gb18030"?>
 <?xml-stylesheet type="text/xsl" href="../xsl/bbs.xsl?v1416"?>

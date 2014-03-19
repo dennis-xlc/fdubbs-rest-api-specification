@@ -73,11 +73,19 @@
 				"list-user-favorite-boards":{
 					"id":"user_favorite_boards.list",
 					"path":"/boards/favor",
-					"httpMethod":"POST",
+					"httpMethod":"GET",
 					"description": "list all favor boards of the user",
-					"request":{
-						"type":"object",
-						"$ref":"user_cookies_info.json"
+					"parameters":{
+						"user_id":{
+							"type":"string",
+							"description":"user id",
+							"location":"path"
+						},
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"location":"cookie"
+						}
 					},
 					"response":{
 						"type":"array",
@@ -119,7 +127,8 @@
 					"parameters":{
 						"section_id":{
 							"type":"integer",
-							"description":"section id"
+							"description":"section id",
+							"location":"path"
 						}
 					},
 					"description": "list all boards in secified section",

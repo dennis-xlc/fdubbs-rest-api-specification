@@ -22,12 +22,9 @@
             "type":"string",
             "description":"error message"
         },
-        "cookies":{
-            "type":"array",
-            "description":"cookies",
-            "items":{
-                "$ref":"cookie_key_value_pair.json"
-            }
+        "auth_code":{
+            "type":"string",
+            "description":"error message"
         }
     }
 }

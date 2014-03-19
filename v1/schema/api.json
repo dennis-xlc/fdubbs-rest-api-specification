@@ -73,7 +73,7 @@
 				"list-user-favorite-boards":{
 					"id":"user_favorite_boards.list",
 					"path":"/boards/favor",
-					"httpMethod":"GET",
+					"httpMethod":"POST",
 					"description": "list all favor boards of the user",
 					"request":{
 						"type":"object",

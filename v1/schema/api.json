@@ -48,6 +48,34 @@
 					"scopes":[
 						"http://rest-api-for-fdubbs.herokuapp.com/"
 					]
+				},
+				"user-logout":{
+					"id":"user-login-session.delete",
+					"path":"/user/logout",
+					"httpMethod":"POST",
+					"parameters":{
+						"user_id":{
+							"type":"string",
+							"description":"user id",
+							"location":"form"
+						},
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}         
+
+					},
+					"description": "user login",
+					"response":{
+						"type":"object",
+						"description":"login response",
+						"$ref":"login_response.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
 				}
 			}
 		},
@@ -76,14 +104,10 @@
 					"httpMethod":"GET",
 					"description": "list all favor boards of the user",
 					"parameters":{
-						"user_id":{
-							"type":"string",
-							"description":"user id",
-							"location":"path"
-						},
 						"auth_code":{
 							"type":"string",
 							"description":"user auth code",
+							"required":true,
 							"location":"cookie"
 						}
 					},

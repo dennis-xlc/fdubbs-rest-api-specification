@@ -1,0 +1,17 @@
+{
+	"locale" : "en_US",
+	"domain" : "common",
+	"type" : "errors",
+	"errors" : [
+		{
+			"name" : "INTERNAL_SERVICE_ERROR",
+			"message" : "An internal service error has occurred.",
+			"information_link" : ""
+		},
+		{
+			"name" : "INVALID_REQUEST_PARAMETER",
+			"message" : "Request parameter is invalid.",
+			"information_link" : ""
+		}
+	]
+}

@@ -5,13 +5,25 @@
 	"description": "post meta data",
 	"id": "post_meta_data:v1",
 	"properties":{
-		"section_id": {
+		"post_id":{
 			"type":"string",
-			"description": "section id"
+			"description":"post id"
 		},
-		"section_desc": {
+		"title":{
 			"type":"string",
-			"description": "section description"
+			"description":"post id"
+		},
+		"owner":{
+			"type":"string",
+			"description":"owner"
+		},
+		"date":{
+			"type":"string",
+			"description":"time"
+		},
+		"board":{
+			"type":"string",
+			"description":"board"
 		}
 	}
 }

@@ -20,6 +20,10 @@
 		"mark_sign":{
 			"type":"string",
 			"description": "mark sign"
+		},
+		"is_noreply":{
+			"type":"boolean",
+			"description": "is noreply"
 		}
 	}
 }

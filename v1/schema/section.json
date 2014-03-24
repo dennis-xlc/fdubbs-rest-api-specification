@@ -14,7 +14,7 @@
             "description":"boards in the section",
             "items":{
                 "type":"object",
-                "$ref":"board.json"
+                "$ref":"board_detail.json"
             }
         }
     }

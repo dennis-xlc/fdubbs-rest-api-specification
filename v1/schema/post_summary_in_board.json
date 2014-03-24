@@ -1,0 +1,29 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"board summary in board",
+    "description":"board summary in board",
+    "id":"board_summary_in_board:v1",
+    "properties":{
+        "board_meta_data":{
+            "type":"object",
+            "description":"board_meta_data",
+            "$ref":"board_meta_data.json"
+        },
+        "start_post_num":{
+            "type":"integer",
+            "description":"start post number"
+        },
+        "post_count":{
+            "type":"integer",
+            "description":"post count"
+        },
+        "post_summary_list":{
+            "type":"array",
+            "description":"post summary list",
+            "items":{
+                "$ref":"post_summary.json"
+            }
+        }
+    }
+}

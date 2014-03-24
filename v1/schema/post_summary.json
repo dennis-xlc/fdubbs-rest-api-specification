@@ -21,7 +21,7 @@
 			"type":"string",
 			"description": "mark sign"
 		},
-		"is_noreply":{
+		"is_no_reply":{
 			"type":"boolean",
 			"description": "is noreply"
 		}

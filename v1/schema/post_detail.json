@@ -10,8 +10,8 @@
             "$ref":"post_meta_data.json"
         },
         "content":{
-			"type":"string",
-			"description": "content"
+			"type":"object",
+            "$ref":"post_content.json"
 		}
 	}
 }

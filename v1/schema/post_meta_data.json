@@ -17,6 +17,10 @@
 			"type":"string",
 			"description":"owner"
 		},
+		"nick":{
+			"type":"string",
+			"description":"nick"
+		},
 		"date":{
 			"type":"string",
 			"description":"time"

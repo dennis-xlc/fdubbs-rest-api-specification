@@ -9,9 +9,38 @@
             "type":"object",
             "$ref":"post_meta_data.json"
         },
-        "content":{
-			"type":"object",
-            "$ref":"post_content.json"
-		}
+        "body":{
+			"type":"array",
+            "description":"body",
+            "required":true,
+            "items":{
+                "type":"object",
+                "$ref":"paragraph.json"
+            }
+		},
+        "qoute":{
+			"type":"array",
+            "description":"qoute",
+            "items":{
+                "type":"object",
+                "$ref":"paragraph.json"
+            }
+		},
+        "sign":{
+			"type":"array",
+            "description":"sign",
+            "items":{
+                "type":"object",
+                "$ref":"paragraph.json"
+            }
+		},
+        "replies":{
+            "type":"array",
+            "description":"replies",
+            "items":{
+                "type":"object",
+                "$ref":"post_detail.json"
+            }
+        }
 	}
 }

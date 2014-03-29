@@ -1,0 +1,17 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"paragraph",
+    "description":"paragraph",
+    "id":"paragraph:v1",
+    "properties":{
+        "is_newline":{
+            "type":"boolean",
+            "description":"the paragrah only contains newline in the section"
+        },
+        "content":{
+            "type":"string",
+            "description":"content in the paragraph"
+        }
+    }
+}

@@ -6,3 +6,8 @@ auth_code=OwS00xFzTHr5tKwAGXQQGJuZmc9Lc3fK
 Cookie
 auth_code=GRsmwSJzMo0xWoUJM8nJLWL7xWIPEUS0
 
+http://localhost:8080/api/v1/post/{list_mode}/id/{board_id}/detail/{post_id}
+
+http://localhost:8080/api/v1/post/normal/id/11/detail/1246263
+
+http://localhost:8080/api/v1/post/normal/id/40/detail/363147

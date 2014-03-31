@@ -1,0 +1,21 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"paragraph content",
+    "description":"paragraph_content",
+    "id":"paragraph_content:v1",
+    "properties":{
+        "is_link":{
+            "type":"boolean",
+            "description":"link"
+        },
+        "is_image":{
+            "type":"boolean",
+            "description":"image"
+        },
+        "content":{
+            "type":"string",
+            "description":"content"
+        }
+    }
+}

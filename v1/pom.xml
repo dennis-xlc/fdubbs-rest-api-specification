@@ -51,8 +51,10 @@
 								<sourcePath>${basedir}/schema</sourcePath>
 							</sourcePaths>
 							<targetPackage>cn.edu.fudan.ss.xulvcai.fdubbs.api.restful.pojo</targetPackage>
-							<includeJsr303Annotations>true</includeJsr303Annotations>
+							<includeJsr303Annotations>false</includeJsr303Annotations>
 							<propertyWordDelimiters>_</propertyWordDelimiters>
+							<generateBuilders>true</generateBuilders>
+							
 							<removeOldOutput>true</removeOldOutput>
 						</configuration>
 						<goals>

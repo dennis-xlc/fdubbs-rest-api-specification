@@ -9,9 +9,13 @@
             "type":"boolean",
             "description":"the paragrah only contains newline in the section"
         },
-        "content":{
-            "type":"string",
-            "description":"content in the paragraph"
+        "paragraph_content":{
+            "type":"array",
+            "description":"content in the paragraph",
+            "items":{
+                "type":"object",
+                "$ref":"paragraph_content.json"
+            }
         }
     }
 }

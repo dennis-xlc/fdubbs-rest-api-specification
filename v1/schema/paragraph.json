@@ -5,10 +5,6 @@
     "description":"paragraph",
     "id":"paragraph:v1",
     "properties":{
-        "is_newline":{
-            "type":"boolean",
-            "description":"the paragrah only contains newline in the section"
-        },
         "paragraph_content":{
             "type":"array",
             "description":"content in the paragraph",

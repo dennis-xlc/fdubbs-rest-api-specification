@@ -5,6 +5,10 @@
     "description":"paragraph_content",
     "id":"paragraph_content:v1",
     "properties":{
+        "is_newline":{
+            "type":"boolean",
+            "description":"newline"
+        },
         "is_link":{
             "type":"boolean",
             "description":"link"
@@ -12,6 +16,10 @@
         "is_image":{
             "type":"boolean",
             "description":"image"
+        },
+        "link_ref":{
+            "type":"string",
+            "description":"link ref"
         },
         "content":{
             "type":"string",

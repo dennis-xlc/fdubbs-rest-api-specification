@@ -1,0 +1,13 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"user signature",
+    "description":"user signature",
+    "id":"user_signature:v1",
+    "properties":{
+        "signature":{
+            "type":"string",
+            "description":"user signature"
+        }
+    }
+}

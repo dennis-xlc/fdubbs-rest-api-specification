@@ -79,6 +79,162 @@
 				}
 			}
 		},
+		"user":{
+			"methods":{
+				"get-user-info":{
+					"id":"user_info.get",
+					"path":"/user/info/{user_id}",
+					"httpMethod":"GET",
+					"description": "get info of the specified user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						},
+						"user_id":{
+							"type":"string",
+							"description":"user id",
+							"required":true,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"info of the specified user",
+						"$ref":"user_info.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
+		},
+		"friend":{
+			"methods":{
+				"get-all-friend":{
+					"id":"all_friend.get",
+					"path":"/profile/friend/all",
+					"httpMethod":"GET",
+					"description": "get all friends of the logined user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"all friends of the logined user",
+						"items":{
+							"type":"object",
+							"$ref":"friend.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"get-online-friend":{
+					"id":"online_friend.get",
+					"path":"/profile/friend/onilne",
+					"httpMethod":"GET",
+					"description": "get all online friends of the logined user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"all online friends of the logined user",
+						"items":{
+							"type":"object",
+							"$ref":"friend.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
+		},
+		"profile":{
+			"methods":{
+				"get-basic-profile":{
+					"id":"profile_basic.get",
+					"path":"/profile/basic",
+					"httpMethod":"GET",
+					"description": "get the basic profile of the logined user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"the basic profile of the logined user",
+						"$ref":"basic_profile.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"get-user-introdution":{
+					"id":"user_introdution.get",
+					"path":"/profile/introdution",
+					"httpMethod":"GET",
+					"description": "get the introdution of the logined user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"the introdution of the logined user",
+						"$ref":"user_introdution.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"get-user-signature":{
+					"id":"user_signature.get",
+					"path":"/profile/signature",
+					"httpMethod":"GET",
+					"description": "get the signature of the logined user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"the signature of the logined user",
+						"$ref":"user_signature.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
+		},
 		"board":{
 			"methods":{
 				"list-all-boards":{

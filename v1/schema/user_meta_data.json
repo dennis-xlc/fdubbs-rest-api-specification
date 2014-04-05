@@ -1,0 +1,45 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "user meta data",
+	"description": "user meta data",
+	"id": "user_meta_data:v1",
+	"properties":{
+		"user_id":{
+			"type":"string",
+			"description":"user id"
+		},
+		"nick":{
+			"type":"string",
+			"description":"nick"
+		},
+        "gender":{
+            "type":"string",
+            "description":"gender"
+        },
+		"last_login_ip":{
+			"type":"string",
+			"description":"last login ip"
+		},
+        "post_count":{
+            "type":"integer",
+            "description":"total number of posts"
+        },
+        "login_count":{
+            "type":"integer",
+            "description":"total times of posts"
+        },
+		"horoscope":{
+			"type":"string",
+			"description":"horoscope"
+		},
+        "last_login_time":{
+            "type":"string",
+            "description":"last login time"
+        },
+        "last_login_ip":{
+            "type":"string",
+            "description":"last login ip"
+        }
+	}
+}

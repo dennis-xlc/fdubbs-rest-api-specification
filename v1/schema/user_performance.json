@@ -1,0 +1,33 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "user performance",
+	"description": "user performance",
+	"id": "user_performance:v1",
+	"properties":{
+		"performance":{
+			"type":"string",
+			"description":"performance"
+		},
+		"hp":{
+			"type":"integer",
+			"description":"hp"
+		},
+		"level":{
+			"type":"integer",
+			"description":"level"
+		},
+		"repeat":{
+			"type":"integer",
+			"description":"repeat"
+		},
+		"contrib":{
+			"type":"integer",
+			"description":"contrib"
+		},
+		"rank":{
+			"type":"string",
+			"description":"rank"
+		}
+	}
+}

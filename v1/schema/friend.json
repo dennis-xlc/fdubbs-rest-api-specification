@@ -1,0 +1,33 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "friend",
+	"description": "friend",
+	"id": "friend:v1",
+	"properties":{
+		"user_id":{
+			"type":"string",
+			"description":"user id"
+		},
+		"nick":{
+			"type":"string",
+			"description":"nick"
+		},
+		"last_login_ip":{
+			"type":"string",
+			"description":"last login ip"
+		},
+		"last_action":{
+			"type":"string",
+			"description":"last action"
+		},
+		"idle_time":{
+			"type":"integer",
+			"description":"idle time in minutes"
+		},
+		"desc":{
+			"type":"string",
+			"description":"description"
+		}
+	}
+}

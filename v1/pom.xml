@@ -54,7 +54,8 @@
 							<includeJsr303Annotations>false</includeJsr303Annotations>
 							<propertyWordDelimiters>_</propertyWordDelimiters>
 							<generateBuilders>true</generateBuilders>
-							
+							<!--<usePrimitives>true</usePrimitives>-->
+							<!--<useLongIntegers>true</useLongIntegers>-->
 							<removeOldOutput>true</removeOldOutput>
 						</configuration>
 						<goals>

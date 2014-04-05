@@ -1,0 +1,13 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"user introdution",
+    "description":"user introdution",
+    "id":"user_introdution:v1",
+    "properties":{
+        "introdution":{
+            "type":"string",
+            "description":"user introdution"
+        }
+    }
+}

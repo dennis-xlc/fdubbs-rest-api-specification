@@ -279,13 +279,9 @@
 						}
 					},
 					"response":{
-						"type":"array",
+						"type":"object",
 						"description":"all mails of the logined user",
-						"items":{
-							"type":"object",
-							"$ref":"inbox.json"
-						},
-
+						"$ref":"mail_summary_inbox.json"
 					},
 					"scopes":[
 						"http://rest-api-for-fdubbs.herokuapp.com/"

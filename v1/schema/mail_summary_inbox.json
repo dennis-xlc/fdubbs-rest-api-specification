@@ -1,15 +1,10 @@
 {
     "type":"object",
     "$schema":"http://json-schema.org/draft-04/hyper-schema",
-    "name":"mail inbox",
-    "description":"mail inbox",
-    "id":"inbox:v1",
+    "name":"mail_summary inbox",
+    "description":"mail_summary inbox",
+    "id":"mail_summary_inbox:v1",
     "properties":{
-        "board_meta_data":{
-            "type":"object",
-            "description":"board_meta_data",
-            "$ref":"board_meta_data.json"
-        },
         "start_mail_num":{
             "type":"integer",
             "description":"start mail number"

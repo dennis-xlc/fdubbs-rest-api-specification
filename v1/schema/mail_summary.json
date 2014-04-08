@@ -1,0 +1,37 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "mail summary",
+	"description": "mail summary",
+	"id": "mail_summary:v1",
+	"properties":{
+		"mail_number":{
+            "type":"integer",
+            "description": "mail number"
+        },
+		"is_new":{
+			"type":"boolean",
+			"description": "if the mail is new"
+		},
+		"mark_sign":{
+			"type":"string",
+			"description": "mark sign"
+		},
+		"sender":{
+			"type":"string",
+			"description": "sender id"
+		},
+		"date":{
+			"type":"string",
+			"description": "date"
+		},
+		"name":{
+			"type":"string",
+			"description": "name"
+		},
+		"title":{
+			"type":"string",
+			"description": "title"
+		}
+	}
+}

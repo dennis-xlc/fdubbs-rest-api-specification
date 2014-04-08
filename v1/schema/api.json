@@ -26,20 +26,28 @@
 					"id":"user-login-session.create",
 					"path":"/user/login",
 					"httpMethod":"POST",
+					"description": "user login",
 					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						},
 						"user_id":{
 							"type":"string",
 							"description":"user id",
+							"required":true,
 							"location":"form"
 						},
 						"passwd":{
 							"type":"string",
 							"description":"user id",
+							"required":true,
 							"location":"form"
 						}
 
 					},
-					"description": "user login",
 					"response":{
 						"type":"object",
 						"description":"login response",
@@ -53,25 +61,14 @@
 					"id":"user-login-session.delete",
 					"path":"/user/logout",
 					"httpMethod":"POST",
+					"description": "user login",
 					"parameters":{
-						"user_id":{
-							"type":"string",
-							"description":"user id",
-							"location":"form"
-						},
 						"auth_code":{
 							"type":"string",
 							"description":"user auth code",
 							"required":true,
 							"location":"cookie"
-						}         
-
-					},
-					"description": "user login",
-					"response":{
-						"type":"object",
-						"description":"login response",
-						"$ref":"login_response.json"
+						}
 					},
 					"scopes":[
 						"http://rest-api-for-fdubbs.herokuapp.com/"
@@ -235,6 +232,67 @@
 				}
 			}
 		},
+		"mail":{
+			"methods":{
+				"get-new-mails":{
+					"id":"new_mails.get",
+					"path":"/mail/new",
+					"httpMethod":"GET",
+					"description": "get the new mails of the logined user",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"new mails of the logined user",
+						"items":{
+							"type":"object",
+							"$ref":"mail_summary.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"get-all-mails":{
+					"id":"all_mails.get",
+					"path":"/mail/all/{start_num}",
+					"httpMethod":"GET",
+					"description": "get all mails of the logined user, if {start_num} is missing, then return last 20 mails",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						},
+						"start_num":{
+							"type":"integer",
+							"description":"start number",
+							"required":false,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"all mails of the logined user",
+						"items":{
+							"type":"object",
+							"$ref":"inbox.json"
+						},
+
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
+		},
 		"board":{
 			"methods":{
 				"list-all-boards":{
@@ -242,6 +300,14 @@
 					"path":"/boards/all",
 					"httpMethod":"GET",
 					"description": "list all boards",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						}
+					},
 					"response":{
 						"type":"array",
 						"description":"all boards",
@@ -288,6 +354,14 @@
 					"path":"/section/all",
 					"httpMethod":"GET",
 					"description": "list all sections",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						}
+					},
 					"response":{
 						"type":"array",
 						"description":"all sections' meta data",
@@ -305,9 +379,16 @@
 					"path":"section/{section_id}/",
 					"httpMethod":"GET",
 					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						},
 						"section_id":{
 							"type":"integer",
 							"description":"section id",
+							"required":true,
 							"location":"path"
 						}
 					},

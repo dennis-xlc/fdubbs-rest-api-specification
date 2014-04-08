@@ -1,0 +1,33 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"mail inbox",
+    "description":"mail inbox",
+    "id":"inbox:v1",
+    "properties":{
+        "board_meta_data":{
+            "type":"object",
+            "description":"board_meta_data",
+            "$ref":"board_meta_data.json"
+        },
+        "start_mail_num":{
+            "type":"integer",
+            "description":"start mail number"
+        },
+        "total_count":{
+            "type":"integer",
+            "description":"total mail number"
+        },
+        "mail_count":{
+            "type":"integer",
+            "description":"mail count"
+        },
+        "mail_summary_list":{
+            "type":"array",
+            "description":"mail summary list",
+            "items":{
+                "$ref":"mail_summary.json"
+            }
+        }
+    }
+}

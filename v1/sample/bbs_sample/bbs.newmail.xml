@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/bbs.xsl?v1416"?>
+<bbsmail new="1">
+   <session m="">
+      <p>lt</p>
+      <u>hidennis</u>
+   </session>
+   <mail m="+" from="celebration" name="sharedmail/mailall.celebration.1395146335" n="84" date="2014-03-18T20:38:55">[Type 2 公告] 日月光华站十八周年站庆团拜会邀请公告</mail>
+   <mail m="+" from="celebration" name="sharedmail/mailall.celebration.1393904662" n="83" date="2014-03-04T11:44:22">[Type 2 公告] 日月光华十八周年站庆志愿者招募公告</mail>
+   <mail m="+" from="celebration" name="sharedmail/mailall.celebration.1393904162" n="82" date="2014-03-04T11:36:02">[Type 2 公告] 日月光华站十八周年站庆公告</mail>
+   <mail m="+" from="celebration" name="sharedmail/mailall.celebration.1391612778" n="81" date="2014-02-05T23:06:18">[Type 2 公告] 日月光华十八周年站庆衫设计方案征集</mail>
+   <mail m="+" from="celebration" name="sharedmail/mailall.celebration.1366344818" n="80" date="2013-04-19T12:13:38">[Type 2 公告] 十七周年站庆衫开始领取啦~~~~~</mail
+</bbsmail>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/bbs.xsl?v1416"?>
+<bbsmail start="68" total="87" page="20" dpage="20">
+   <session m="">
+      <p>lt</p>
+      <u>hidennis</u>
+   </session>
+   <mail r="1" m=" " from="qIzZ" date="2014-03-26T21:05:09" name="M.1395839109.A">Re: 求易迅800-50优惠券，谢谢~</mail>
+   <mail r="1" m=" " from="hidennis" date="2014-03-26T20:30:00" name="M.1395837000.A">{qIzZ} 求易迅800-50优惠券，谢谢~</mail>
+   <mail r="1" m=" " from="celebration" date="2014-03-18T23:40:45" name="sharedmail/mailall.celebration.1395157245">[Type 2 公告] 日月光华站十八周年站庆衫开始征订！</mail>
+   <mail r="0" m="+" from="celebration" date="2014-03-18T20:38:55" name="sharedmail/mailall.celebration.1395146335">[Type 2 公告] 日月光华站十八周年站庆团拜会邀请公告</mail>
+   <mail r="0" m="+" from="celebration" date="2014-03-04T11:44:22" name="sharedmail/mailall.celebration.1393904662">[Type 2 公告] 日月光华十八周年站庆志愿者招募公告</mail>
+   <mail r="0" m="+" from="celebration" date="2014-03-04T11:36:02" name="sharedmail/mailall.celebration.1393904162">[Type 2 公告] 日月光华站十八周年站庆公告</mail>
+   <mail r="0" m="+" from="celebration" date="2014-02-05T23:06:18" name="sharedmail/mailall.celebration.1391612778">[Type 2 公告] 日月光华十八周年站庆衫设计方案征集</mail>
+   <mail r="0" m="+" from="celebration" date="2013-04-19T12:13:38" name="sharedmail/mailall.celebration.1366344818">[Type 2 公告] 十七周年站庆衫开始领取啦~~~~~</mail>
+   <mail r="1" m=" " from="celebration" date="2013-03-17T16:44:29" name="sharedmail/mailall.celebration.1363509869">[Type 2 公告] 日月光华站17周年站庆衫征订开始啦！</mail>
+   <mail r="1" m=" " from="celebration" date="2013-03-16T21:22:50" name="sharedmail/mailall.celebration.1363440170">[Type 2 公告] 日月光华站17周年站庆团拜会邀请公告</mail>
+   <mail r="1" m=" " from="celebration" date="2013-03-01T21:32:10" name="sharedmail/mailall.celebration.1362144730">[Type 2 公告] 日月光华十七周年站庆志愿者招募公告</mail>
+   <mail r="1" m=" " from="SYSOP" date="2013-03-01T21:26:45" name="sharedmail/mailall.SYSOP.1362144405">[Type 2 公告] 日月光华站十七周年站庆公告</mail>
+   <mail r="1" m=" " from="SYSOP" date="2013-03-01T19:38:46" name="sharedmail/mailall.SYSOP.1362137926">[Type 2 公告] 日月光华十七周年站庆衫设计方案征集</mail>
+   <mail r="1" m=" " from="gluke" date="2013-01-30T23:53:30" name="M.1359561210.A">Re: 您好'我是许铝才</mail>
+   <mail r="1" m=" " from="gluke" date="2013-01-30T23:46:08" name="M.1359560768.A">Re: 您好'我是许铝才</mail>
+   <mail r="1" m=" " from="SYSOP" date="2012-12-17T19:11:45" name="sharedmail/mailall.SYSOP.1355742705">[Type 2 公告] 本站开始发放版主工资</mail>
+   <mail r="1" m=" " from="MissahJJQ" date="2012-12-12T18:05:18" name="M.1355306718.A">09302010015求问编译原理期中考试及PJ成绩</mail>
+   <mail r="1" m=" " from="MissahJJQ" date="2012-12-12T13:42:12" name="M.1355290932.A">查一下编译原理期中以及PJ成绩</mail>
+   <mail r="1" m=" " from="fieryIce" date="2012-12-09T11:20:12" name="M.1355023212.A">询问编译原理分数</mail>
+   <mail r="1" m=" " from="xurunyu" date="2012-12-09T10:29:27" name="M.1355020167.A">求编译期中成绩</mail>
+</bbsmail>

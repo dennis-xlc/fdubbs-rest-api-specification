@@ -286,6 +286,40 @@
 					"scopes":[
 						"http://rest-api-for-fdubbs.herokuapp.com/"
 					]
+				},
+				"get-mail-detail":{
+					"id":"mail_detail.get",
+					"path":"/mail/{mail_number}/{mail_link}",
+					"httpMethod":"GET",
+					"description": "get the mail detail ",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":true,
+							"location":"cookie"
+						},
+						"mail_number":{
+							"type":"integer",
+							"description":"mail number",
+							"required":true,
+							"location":"path"
+						},
+						"mail_link":{
+							"type":"integer",
+							"description":"mail link",
+							"required":true,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"all mails of the logined user",
+						"$ref":"mail_detail.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
 				}
 			}
 		},

@@ -1,37 +1,37 @@
 {
 	"type":"object",
 	"$schema": "http://json-schema.org/draft-04/hyper-schema",
-	"name": "mail summary",
-	"description": "mail summary",
-	"id": "mail_summary:v1",
+	"name": "mail detail",
+	"description": "mail detail",
+	"id": "mail_detail:v1",
 	"properties":{
 		"mail_number":{
             "type":"integer",
             "description": "mail number"
         },
-		"is_new":{
-			"type":"boolean",
-			"description": "if the mail is new"
-		},
-		"mark_sign":{
+		"mail_link":{
 			"type":"string",
-			"description": "mark sign"
+			"description": "mail link"
 		},
 		"sender":{
 			"type":"string",
 			"description": "sender id"
 		},
-		"date":{
+		"nick":{
 			"type":"string",
-			"description": "date"
-		},
-		"mail_link":{
-			"type":"string",
-			"description": "mail link"
+			"description": "sender id"
 		},
 		"title":{
 			"type":"string",
-			"description": "title"
+			"description": "sender id"
+		},
+		"date":{
+			"type":"string",
+			"description": "sender id"
+		},
+		"content":{
+			"type":"string",
+			"description": "mail content"
 		}
 	}
 }

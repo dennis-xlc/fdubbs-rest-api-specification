@@ -1,0 +1,201 @@
+
+http://rest-api-for-fdubbs.herokuapp.com/api/v1/post/normal/id/40/detail/363147
+
+
+Cookie : auth_code=9bmmtcbTDzIB3AqTBwJwaZPcOJ5HBqZQ
+GET
+
+
+
+
+    {
+       "post_meta_data":
+       {
+           "post_id": "363147",
+           "title": "2014微软实习生技术类职位网申今天就要截止了 未来一触即变，IT女",
+           "nick": "xiaoxiaowu",
+           "date": "2014年03月31日12:11:41 星期一",
+           "board": "Job_Intern"
+       },
+       "body":
+       [
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": " "
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "2014微软实习生技术类职位网申今天就要截止了 未来一触即变，IT女生变女神！"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "　　亲，你造吗？微软实习生招聘开始啦！2015年毕业的你，想成为编程达人吗？想得到最专业mentor的技术指导吗？想在秋招大战打响前就得到Offer吗？那就快快点击鼠标申请吧。未来一触即变！"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "　　如果你是IT女生，400度近视、大眼袋黑眼圈一个都不少、皮肤黯淡无光永远都木有男朋友！这是你想要的生活么？未来一触即变微软“IT女神”打造计划已经启动，转发微博"
+                   },
+                   {
+                       "is_link": true,
+                       "is_image": false,
+                       "link_ref": "http://weibo.com/3488805082"
+                   },
+                   {
+                       "content": "喊出#未来一触即变#+你希望的未来职场生活@3位女性好友，既有机会获得微软“情侣双人电影票”及微软实习生招募宣讲会“女神VIP”专席 女生节专属好礼，3月31日前，女生简历网申量最大的学校，更有微软求职大讲堂来到你的身边；"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "　　　2014微软实习生招募信息"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "实习职位：职位涵盖软件开发，技术支持和销售市场等领域"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "实习地点：北京、上海、无锡、苏州、广州"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "实习期限：实习生在微软的实习期通常需要达到三个月或以上，形式分全职兼职两种，全职实习生周一至周五工作5天，兼职实习生一周需要保证工作3个工作日以上。我们鼓励同学们在假期进行全职实习，以获得更全面连贯的实习项目经验。"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "网申请登录微软校园招聘官网：www.joinms.com ，或登录bing.com搜索‘微软实习生招聘’"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "网申的同学可以直接获得网上测评的机会。"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "网申截止日期：技术类职位3月31日, 非技术类职位 4月18日"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "宣讲安排：3月中旬至3月下旬 (具体行程请参考微软校招官网)"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "笔试：4"
+                   },
+                   {
+                       "content": "月上旬"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "面试：4月中旬开始"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "Offer发放：5月开始"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "入职：6月开始"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": " 更多微软实习生招募实时动态请关注微软招聘官方微博："
+                   },
+                   {
+                       "is_link": true,
+                       "is_image": false,
+                       "link_ref": "http://weibo.com/u/3488805082"
+                   }
+               ]
+           }
+       ],
+       "qoute":
+       [
+       ],
+       "sign":
+       [
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "--"
+                   }
+               ]
+           },
+           {
+               "paragraph_content":
+               [
+                   {
+                       "content": "※ 来源:·日月光华 bbs.fudan.edu.cn·HTTP [FROM: 58.209.191.*]"
+                   }
+               ]
+           }
+       ],
+       "replies":
+       [
+       ]
+    }
+

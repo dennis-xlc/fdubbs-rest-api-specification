@@ -1,0 +1,23 @@
+URL : http://rest-api-for-fdubbs.herokuapp.com/api/v1/user/login
+Content-Type : application/x-www-form-urlencoded
+
+
+POST
+
+user_id=hidennis&passwd=870914
+
+
+Response :
+
+200 OK
+application/json
+
+
+
+    {
+       "result_code": "SUCCESS",
+       "auth_code": "9bmmtcbTDzIB3AqTBwJwaZPcOJ5HBqZQ"
+    }
+
+
+

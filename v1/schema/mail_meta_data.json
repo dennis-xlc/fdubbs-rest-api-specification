@@ -1,0 +1,33 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "mail meta data",
+	"description": "mail meta data",
+	"id": "mail_meta_data:v1",
+	"properties":{
+		"mail_number":{
+            "type":"integer",
+            "description": "mail number"
+        },
+		"mail_link":{
+			"type":"string",
+			"description": "mail link"
+		},
+		"sender":{
+			"type":"string",
+			"description": "sender id"
+		},
+		"nick":{
+			"type":"string",
+			"description": "sender id"
+		},
+		"title":{
+			"type":"string",
+			"description": "sender id"
+		},
+		"date":{
+			"type":"string",
+			"description": "sender id"
+		}
+	}
+}

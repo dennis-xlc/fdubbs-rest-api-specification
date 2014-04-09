@@ -5,9 +5,9 @@
 	"description": "mail summary",
 	"id": "mail_summary:v1",
 	"properties":{
-		"mail_number":{
-            "type":"integer",
-            "description": "mail number"
+		"mail_meta_data":{
+            "type":"object",
+            "$ref":"mail_meta_data.json"
         },
 		"is_new":{
 			"type":"boolean",
@@ -16,22 +16,6 @@
 		"mark_sign":{
 			"type":"string",
 			"description": "mark sign"
-		},
-		"sender":{
-			"type":"string",
-			"description": "sender id"
-		},
-		"date":{
-			"type":"string",
-			"description": "date"
-		},
-		"mail_link":{
-			"type":"string",
-			"description": "mail link"
-		},
-		"title":{
-			"type":"string",
-			"description": "title"
 		}
 	}
 }

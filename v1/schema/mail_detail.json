@@ -5,27 +5,15 @@
 	"description": "mail detail",
 	"id": "mail_detail:v1",
 	"properties":{
-		"mail_number":{
-            "type":"integer",
-            "description": "mail number"
+		"mail_meta_data":{
+            "type":"object",
+            "$ref":"mail_meta_data.json"
         },
-		"mail_link":{
-			"type":"string",
-			"description": "mail link"
-		},
-		"sender":{
+		"source":{
 			"type":"string",
 			"description": "sender id"
 		},
-		"nick":{
-			"type":"string",
-			"description": "sender id"
-		},
-		"title":{
-			"type":"string",
-			"description": "sender id"
-		},
-		"date":{
+		"ip":{
 			"type":"string",
 			"description": "sender id"
 		},

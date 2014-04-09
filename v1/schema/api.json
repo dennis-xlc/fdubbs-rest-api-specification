@@ -289,7 +289,7 @@
 				},
 				"get-mail-detail":{
 					"id":"mail_detail.get",
-					"path":"/mail/{mail_number}/{mail_link}",
+					"path":"/mail/detail/{mail_number}/{mail_link}",
 					"httpMethod":"GET",
 					"description": "get the mail detail ",
 					"parameters":{

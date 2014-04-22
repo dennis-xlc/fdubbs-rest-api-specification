@@ -5,7 +5,7 @@
     "description":"paragraph",
     "id":"paragraph:v1",
     "properties":{
-        "paragraph_content":{
+        "c":{
             "type":"array",
             "description":"content in the paragraph",
             "items":{

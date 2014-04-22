@@ -435,7 +435,193 @@
 			}
 		},
 		"post":{
-
+			"methods":{
+				"list-top-posts":{
+					"id":"top_posts.list",
+					"path":"/post/top10",
+					"httpMethod":"GET",
+					"description": "list top 10 posts",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"post summary of top 10 posts",
+						"items":{
+							"type":"object",
+							"$ref":"post_summary.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"list-post-summary-with-board-name":{
+					"id":"post_summary_with_board_name.list",
+					"path":"/post/summary/board/{board_name}/{list_mode}/{start_num}",
+					"httpMethod":"GET",
+					"description": "list post summary in specified board and start post number",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						},
+						"board_name":{
+							"type":"string",
+							"description":"board name",
+							"required":true,
+							"location":"path"
+						},
+						"list_mode":{
+							"type":"string",
+							"description":"list mode, 'normal' or 'topic'",
+							"required":true,
+							"location":"path"
+						},
+						"start_num":{
+							"type":"integer",
+							"description":"start post number, if not specified then return the last 20 posts",
+							"required":false,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"post summary of top 10 posts",
+						"items":{
+							"type":"object",
+							"$ref":"board_summary_in_board.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"list-post-summary-with-board-id":{
+					"id":"post_summary_with_board_id.list",
+					"path":"/post/summary/bid/{board_id}/{list_mode}/{start_num}",
+					"httpMethod":"GET",
+					"description": "list post summary in specified board and start post number",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						},
+						"board_id":{
+							"type":"integer",
+							"description":"board id",
+							"required":true,
+							"location":"path"
+						},
+						"list_mode":{
+							"type":"string",
+							"description":"list mode, 'normal' or 'topic'",
+							"required":true,
+							"location":"path"
+						},
+						"start_num":{
+							"type":"integer",
+							"description":"start post number, if not specified then return the last 20 posts",
+							"required":false,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"array",
+						"description":"post summary of top 10 posts",
+						"items":{
+							"type":"object",
+							"$ref":"board_summary_in_board.json"
+						}
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"get-post-detail-with-board-name":{
+					"id":"post_detail_with_board_name.get",
+					"path":"/post/detail/board/{board_name}/{post_id}",
+					"httpMethod":"GET",
+					"description": "list post summary in specified board and start post number",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						},
+						"board_name":{
+							"type":"string",
+							"description":"board name",
+							"required":true,
+							"location":"path"
+						},
+						"post_id":{
+							"type":"integer",
+							"description":"post_id",
+							"required":true,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"section detail",
+						"$ref":"post_detail.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				},
+				"get-post-detail-with-board-id":{
+					"id":"post_detail_with_board_id.get",
+					"path":"/post/detail/bid/{board_id}/{list_mode}/{post_id}",
+					"httpMethod":"GET",
+					"description": "list post summary in specified board and start post number",
+					"parameters":{
+						"auth_code":{
+							"type":"string",
+							"description":"user auth code",
+							"required":false,
+							"location":"cookie"
+						},
+						"board_id":{
+							"type":"integer",
+							"description":"board id",
+							"required":true,
+							"location":"path"
+						},
+						"list_mode":{
+							"type":"string",
+							"description":"list mode, 'normal' or 'topic'",
+							"required":true,
+							"location":"path"
+						},
+						"post_id":{
+							"type":"integer",
+							"description":"post_id",
+							"required":true,
+							"location":"path"
+						}
+					},
+					"response":{
+						"type":"object",
+						"description":"section detail",
+						"$ref":"post_detail.json"
+					},
+					"scopes":[
+						"http://rest-api-for-fdubbs.herokuapp.com/"
+					]
+				}
+			}
 		}
 	}
 

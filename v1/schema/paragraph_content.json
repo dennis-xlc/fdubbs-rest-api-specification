@@ -5,23 +5,23 @@
     "description":"paragraph_content",
     "id":"paragraph_content:v1",
     "properties":{
-        "is_newline":{
+        "br":{
             "type":"boolean",
             "description":"newline"
         },
-        "is_link":{
+        "l":{
             "type":"boolean",
             "description":"link"
         },
-        "is_image":{
+        "i":{
             "type":"boolean",
             "description":"image"
         },
-        "link_ref":{
+        "lr":{
             "type":"string",
             "description":"link ref"
         },
-        "content":{
+        "c":{
             "type":"string",
             "description":"content"
         }

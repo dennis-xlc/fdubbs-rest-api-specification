@@ -1,0 +1,21 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"content",
+    "description":"content",
+    "id":"content:v1",
+    "properties":{
+        "text":{
+            "type":"string",
+            "description":"text content"
+        },
+        "images":{
+            "type":"array",
+            "description":"images in the content",
+            "items":{
+                "type":"object",
+                "$ref":"image.json"
+            }
+        }
+    }
+}

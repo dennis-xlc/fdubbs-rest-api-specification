@@ -10,29 +10,22 @@
             "$ref":"post_meta_data.json"
         },
         "body":{
-			"type":"array",
+			"type":"object",
             "description":"body",
             "required":true,
-            "items":{
-                "type":"object",
-                "$ref":"paragraph.json"
-            }
+            "$ref":"content.json"
 		},
         "qoute":{
-			"type":"array",
-            "description":"qoute",
-            "items":{
-                "type":"object",
-                "$ref":"paragraph.json"
-            }
+			"type":"object",
+            "description":"body",
+            "required":true,
+            "$ref":"content.json"
 		},
         "sign":{
-			"type":"array",
-            "description":"sign",
-            "items":{
-                "type":"object",
-                "$ref":"paragraph.json"
-            }
+			"type":"object",
+            "description":"body",
+            "required":true,
+            "$ref":"content.json"
 		},
         "replies":{
             "type":"array",

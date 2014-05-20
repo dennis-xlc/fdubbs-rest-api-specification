@@ -497,7 +497,7 @@
 						"description":"post summary of top 10 posts",
 						"items":{
 							"type":"object",
-							"$ref":"board_summary_in_board.json"
+							"$ref":"post_summary_in_board.json"
 						}
 					},
 					"scopes":[
@@ -540,7 +540,7 @@
 						"description":"post summary of top 10 posts",
 						"items":{
 							"type":"object",
-							"$ref":"board_summary_in_board.json"
+							"$ref":"post_summary_in_board.json"
 						}
 					},
 					"scopes":[

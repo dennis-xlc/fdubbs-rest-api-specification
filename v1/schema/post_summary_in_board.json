@@ -1,9 +1,9 @@
 {
     "type":"object",
     "$schema":"http://json-schema.org/draft-04/hyper-schema",
-    "name":"board summary in board",
-    "description":"board summary in board",
-    "id":"board_summary_in_board:v1",
+    "name":"post summary in board",
+    "description":"post summary in board",
+    "id":"post_summary_in_board:v1",
     "properties":{
         "board_meta_data":{
             "type":"object",

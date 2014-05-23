@@ -1,0 +1,17 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"post qoute",
+    "description":"post qoute",
+    "id":"post_qoute:v1",
+    "properties":{
+        "owner":{
+            "type":"string",
+            "description":"owner"
+        },
+        "content":{
+            "type":"string",
+            "description":"content"
+        }
+    }
+}

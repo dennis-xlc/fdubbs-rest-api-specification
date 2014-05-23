@@ -18,12 +18,12 @@
 		},
         "qoute":{
 			"type":"object",
-            "description":"body",
-            "$ref":"content.json"
+            "description":"qoute",
+            "$ref":"post_qoute.json"
 		},
         "sign":{
 			"type":"object",
-            "description":"body",
+            "description":"sign",
             "$ref":"content.json"
 		},
         "replies":{

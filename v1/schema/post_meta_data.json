@@ -28,6 +28,10 @@
 		"board":{
 			"type":"string",
 			"description":"board"
+		},
+		"board_id":{
+			"type":"string",
+			"description":"board id"
 		}
 	}
 }

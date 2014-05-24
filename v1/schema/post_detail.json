@@ -7,6 +7,7 @@
 	"properties":{
 		"post_meta_data":{
             "type":"object",
+            "required":true,
             "$ref":"post_meta_data.json"
         },
         "body":{
@@ -17,23 +18,18 @@
 		},
         "qoute":{
 			"type":"object",
-            "description":"body",
-            "required":true,
-            "$ref":"content.json"
+            "description":"qoute",
+            "$ref":"post_qoute.json"
 		},
         "sign":{
 			"type":"object",
-            "description":"body",
-            "required":true,
+            "description":"sign",
             "$ref":"content.json"
 		},
         "replies":{
-            "type":"array",
+            "type":"object",
             "description":"replies",
-            "items":{
-                "type":"object",
-                "$ref":"post_detail.json"
-            }
+            "$ref":"post_reply.json"
         }
 	}
 }

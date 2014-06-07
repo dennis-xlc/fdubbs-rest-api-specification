@@ -12,6 +12,10 @@
 		"section_desc": {
 			"type":"string",
 			"description": "section description"
+		},
+		"category": {
+			"type":"string",
+			"description": "section category"
 		}
 	}
 }

@@ -404,9 +404,9 @@
 						"http://rest-api-for-fdubbs.herokuapp.com/"
 					]
 				},
-				"show-all-boards-in-section":{
+				"show-section-detail":{
 					"id":"boards.list",
-					"path":"section/sid/{section_id}/",
+					"path":"section/detail/{section_id}/",
 					"httpMethod":"GET",
 					"parameters":{
 						"auth_code":{

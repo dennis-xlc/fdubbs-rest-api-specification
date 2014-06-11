@@ -406,7 +406,7 @@
 				},
 				"show-all-boards-in-section":{
 					"id":"boards.list",
-					"path":"section/{section_id}/",
+					"path":"section/sid/{section_id}/",
 					"httpMethod":"GET",
 					"parameters":{
 						"auth_code":{

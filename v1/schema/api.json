@@ -60,8 +60,8 @@
 				"user-logout":{
 					"id":"user-login-session.delete",
 					"path":"/user/logout",
-					"httpMethod":"POST",
-					"description": "user login",
+					"httpMethod":"GET",
+					"description": "user logout",
 					"parameters":{
 						"auth_code":{
 							"type":"string",

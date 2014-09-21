@@ -89,6 +89,7 @@ $(function() {
   $.each($(".js-year"), (function() { $(this).text( currentYear ) }));
 
   // Grab API status
+  /*
   $.getJSON('https://status.github.com/api/status.json?callback=?', function(data) {
     if(data) {
       var link = $("<a>")
@@ -99,6 +100,7 @@ $(function() {
       $('.api-status').html(link);
     }
   });
+*/
 
   // Add link anchors for headers with IDs
   $(".content h1, .content h2, .content h3, .content h4").each(function(e){

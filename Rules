@@ -22,23 +22,12 @@ compile '/CNAME/' do
 end
 
 
-compile '/v1/*' do
-  filter :search
-  filter :erb
-  filter :kramdown, :toc_levels => [2]
-  filter :tip_filter
-  filter :colorize_syntax,
-    :colorizers => {:javascript => :rouge}
-  layout item[:layout] || 'api'
-end
-
-
 compile '*' do
   filter :erb
   filter :kramdown, :toc_levels => [2]
   filter :colorize_syntax,
     :colorizers => {:javascript => :rouge}
-  layout item[:layout] || 'default'
+  layout item[:layout] || 'api'
 end
 
 route '/static/*' do

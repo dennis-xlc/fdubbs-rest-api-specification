@@ -2,7 +2,7 @@
 title: Users | REST API
 ---
 
-# Users
+# Object: Users
 
 * TOC
 {:toc}

@@ -2,7 +2,7 @@
 title: Sections | REST API
 ---
 
-# Sections
+# Object: Sections
 
 * TOC
 {:toc}

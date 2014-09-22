@@ -2,7 +2,7 @@
 title: Posts | REST API
 ---
 
-# Posts
+# Object: Posts
 
 * TOC
 {:toc}

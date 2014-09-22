@@ -2,7 +2,7 @@
 title: Mails | REST API
 ---
 
-# Mails
+# Object: Mails
 
 * TOC
 {:toc}

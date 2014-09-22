@@ -2,7 +2,7 @@
 title: Boards | REST API
 ---
 
-# Boards
+# Object: Boards
 
 * TOC
 {:toc}

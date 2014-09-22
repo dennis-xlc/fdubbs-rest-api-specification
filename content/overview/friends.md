@@ -2,7 +2,7 @@
 title: Friends | REST API
 ---
 
-# Friends
+# Object: Friends
 
 * TOC
 {:toc}

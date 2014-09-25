@@ -46,6 +46,218 @@
     <div class="content">
       <h1 id="object-users">Object: Users</h1>
 
+<ul id="markdown-toc">
+  <li><a href="#what-is-a-user-">What is a user ?</a></li>
+  <li><a href="#user-definition">User Definition</a></li>
+</ul>
+
+<h2 id="what-is-a-user-">What is a user ?</h2>
+
+<p>A user is …</p>
+
+<h2 id="user-definition">User Definition</h2>
+
+<p>Below is the JSON definition of a user.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>name</code></td>
+      <td><strong>string</strong></td>
+      <td>User name.</td>
+    </tr>
+    <tr>
+      <td><code>nick</code></td>
+      <td><strong>string</strong></td>
+      <td>The nick name of the user.</td>
+    </tr>
+    <tr>
+      <td><code>gender</code></td>
+      <td><strong>string</strong></td>
+      <td>gender.</td>
+    </tr>
+    <tr>
+      <td><code>horoscope</code></td>
+      <td><strong>string</strong></td>
+      <td>Horoscope.</td>
+    </tr>
+    <tr>
+      <td><code>birth_date</code></td>
+      <td><strong>birth_date</strong></td>
+      <td>Birth date of the user.</td>
+    </tr>
+    <tr>
+      <td><code>register_date</code></td>
+      <td><strong>date</strong></td>
+      <td>Register date.</td>
+    </tr>
+    <tr>
+      <td><code>total_online</code></td>
+      <td><strong>long</strong></td>
+      <td>Total online time of the user.</td>
+    </tr>
+    <tr>
+      <td><code>total_posts</code></td>
+      <td><strong>long</strong></td>
+      <td>Total post number of the user.</td>
+    </tr>
+    <tr>
+      <td><code>login_count</code></td>
+      <td><strong>string</strong></td>
+      <td>Total login number of the user.</td>
+    </tr>
+    <tr>
+      <td><code>last_login_ip</code></td>
+      <td><strong>string</strong></td>
+      <td>Last login ip.</td>
+    </tr>
+    <tr>
+      <td><code>last_login_time</code></td>
+      <td><strong>date</strong></td>
+      <td>Last login time.</td>
+    </tr>
+    <tr>
+      <td><code>status</code></td>
+      <td><strong>status</strong></td>
+      <td>User status.</td>
+    </tr>
+    <tr>
+      <td><code>signature</code></td>
+      <td><strong>string</strong></td>
+      <td>User signature.</td>
+    </tr>
+    <tr>
+      <td><code>ident</code></td>
+      <td><strong>string</strong></td>
+      <td>User ident.</td>
+    </tr>
+    <tr>
+      <td><code>introduction</code></td>
+      <td><strong>string</strong></td>
+      <td>User introduction.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="birth-date">Birth Date</h3>
+
+<p>Below is the JSON definition of the birth date.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>year</code></td>
+      <td><strong>integer</strong></td>
+      <td>Year of  birth.</td>
+    </tr>
+    <tr>
+      <td><code>month</code></td>
+      <td><strong>integer</strong></td>
+      <td>Month of  birth.</td>
+    </tr>
+    <tr>
+      <td><code>day</code></td>
+      <td><strong>integer</strong></td>
+      <td>Day of birth.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="user-status">User Status</h3>
+
+<p>Below is the JSON definition of the user status.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>idle_time</code></td>
+      <td><strong>long</strong></td>
+      <td>User idle time (in minutes).</td>
+    </tr>
+    <tr>
+      <td><code>visible</code></td>
+      <td><strong>boolean</strong></td>
+      <td>‘true’ if the user is visible to other user.</td>
+    </tr>
+    <tr>
+      <td><code>login_by_web</code></td>
+      <td><strong>boolean</strong></td>
+      <td>‘true’ if the user is login through web.</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td><strong>integer</strong></td>
+      <td>User description.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="user-performance">User Performance</h3>
+
+<p>Below is the JSON definition of the user performance.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>performance</code></td>
+      <td><strong>string</strong></td>
+      <td>User performance.</td>
+    </tr>
+    <tr>
+      <td><code>hp</code></td>
+      <td><strong>integer</strong></td>
+      <td>User hp.</td>
+    </tr>
+    <tr>
+      <td><code>level</code></td>
+      <td><strong>integer</strong></td>
+      <td>User level.</td>
+    </tr>
+    <tr>
+      <td><code>repeat</code></td>
+      <td><strong>integer</strong></td>
+      <td>User repeat.</td>
+    </tr>
+    <tr>
+      <td><code>contrib</code></td>
+      <td><strong>integer</strong></td>
+      <td>User contrib.</td>
+    </tr>
+    <tr>
+      <td><code>rank</code></td>
+      <td><strong>string</strong></td>
+      <td>User rank.</td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 

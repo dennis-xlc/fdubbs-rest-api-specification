@@ -46,6 +46,89 @@
     <div class="content">
       <h1 id="object-boards">Object: Boards</h1>
 
+<ul id="markdown-toc">
+  <li><a href="#what-is-a-board-">What is a board ?</a></li>
+  <li><a href="#board-definition">Board definition</a></li>
+</ul>
+
+<h2 id="what-is-a-board-">What is a board ?</h2>
+
+<p>A board is …</p>
+
+<p>A board can be a directory, which contains a set of board(sub-board).</p>
+
+<h2 id="board-definition">Board definition</h2>
+
+<p>Below is the JSON definition of a board.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>id</code></td>
+      <td><strong>string</strong></td>
+      <td>The unique identifier of a board</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td><strong>string</strong></td>
+      <td>The name of a board</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td><strong>string</strong></td>
+      <td>The description of a board</td>
+    </tr>
+    <tr>
+      <td><code>category</code></td>
+      <td><strong>string</strong></td>
+      <td>The category of a board</td>
+    </tr>
+    <tr>
+      <td><code>total_posts</code></td>
+      <td><strong>long</strong></td>
+      <td>Total number of posts in the board</td>
+    </tr>
+    <tr>
+      <td><code>is_directory</code></td>
+      <td><strong>boolean</strong></td>
+      <td>‘true’ if the board is a directory. A directory can contain one or more boards.</td>
+    </tr>
+    <tr>
+      <td><code>has_unread</code></td>
+      <td><strong>boolean</strong></td>
+      <td>‘true’ if the board contains anu unread post for the user, ‘false’ otherwise.</td>
+    </tr>
+    <tr>
+      <td><code>managers</code></td>
+      <td>(string) <strong>array</strong>
+</td>
+      <td>A list of the board manager’s name. A board manager must be a user of the system.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<pre><code>{
+  "id": "...",
+  "name": "...",
+  "description": "...",
+  "category": "...",
+  "total_posts": 1234,
+  "is_directory": false,
+  "has_unread": true,
+  "managers": [
+    "abc",...,"xyz"
+  ]
+}
+</code></pre>
 
     </div>
 

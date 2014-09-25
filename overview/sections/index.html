@@ -46,6 +46,69 @@
     <div class="content">
       <h1 id="object-sections">Object: Sections</h1>
 
+<ul id="markdown-toc">
+  <li><a href="#what-is-a-section-">What is a section ?</a></li>
+  <li><a href="#section-definition">Section definition</a></li>
+</ul>
+
+<h2 id="what-is-a-section-">What is a section ?</h2>
+
+<p>A section contains a set of <a href="/overview/boards"><code>boards</code></a>.</p>
+
+<h2 id="section-definition">Section definition</h2>
+
+<p>Below is the JSON definition of a section.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>id</code></td>
+      <td><strong>string</strong></td>
+      <td>The unique identifier of a section</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td><strong>string</strong></td>
+      <td>The name of a section</td>
+    </tr>
+    <tr>
+      <td><code>category</code></td>
+      <td><strong>string</strong></td>
+      <td>The category of a section</td>
+    </tr>
+    <tr>
+      <td><code>boards</code></td>
+      <td>(<a href="/overview/boards">board</a>) <strong>array</strong>
+</td>
+      <td>all <a href="/overview/boards"><code>boards</code></a> belong to the section</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<pre><code>{
+  "id": "xxx",
+  "name": "xxx",
+  "category": "xxx",
+  "boards": [
+    {
+      ...
+    },
+    ...
+    {
+      ...
+    }
+  ]
+}
+</code></pre>
 
     </div>
 

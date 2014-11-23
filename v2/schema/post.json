@@ -1,0 +1,71 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"post detail",
+    "description":"post detail",
+    "id":"post:v2",
+    "properties":{
+        "id":{
+            "type":"string",
+            "description":"The unique identifier of a post"
+        },
+        "title":{
+            "type":"string",
+            "description":"The title of a post"
+        },
+        "owner":{
+            "type":"string",
+            "description":"The owner of a post"
+        },
+        "nick":{
+            "type":"string",
+            "description":"The nick of the post owner"
+        },
+        "sign":{
+            "type":"string",
+            "description":"sign of the post owner, in html format"
+        },
+        "date":{
+            "type":"date",
+            "description":"The date of the post"
+        },
+        "board":{
+            "type":"string",
+            "description":"The board which the post belongs"
+        },
+        "board_id":{
+            "type":"string",
+            "description":"The board id which the post belongs"
+        },
+        "count":{
+            "type":"string",
+            "description": "count"
+        },
+        "sticky":{
+            "type":"boolean",
+            "description": "is sticky"
+        },
+        "mark_sign":{
+            "type":"string",
+            "description": "mark sign"
+        },
+        "repliable":{
+            "type":"boolean",
+            "description": "is noreply"
+        },
+        "body":{
+            "type":"string",
+            "description":"post body, which in html format",
+            "required":true
+        },
+        "qoute":{
+            "type":"string",
+            "description":"qoute of the post, in html format"
+        },
+        "replies":{
+            "type":"object",
+            "description":"reply list of the post",
+            "$ref":"reply.json"
+        }
+    }
+}

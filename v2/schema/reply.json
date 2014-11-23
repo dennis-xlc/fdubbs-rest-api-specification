@@ -1,0 +1,24 @@
+{
+    "type":"object",
+    "$schema":"http://json-schema.org/draft-04/hyper-schema",
+    "name":"post reply",
+    "description":"post reply",
+    "id":"reply:v2",
+    "properties":{
+        "board_id":{
+            "type":"string",
+            "description":"board id"
+        },
+        "post_id":{
+            "type":"string",
+            "description":"main post id"
+        },
+        "reply_list":{
+            "type":"array",
+            "description":"post reply list",
+            "items":{
+                "$ref":"post.json"
+            }
+        }
+    }
+}

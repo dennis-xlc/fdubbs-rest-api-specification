@@ -31,27 +31,23 @@
         },
         "board":{
             "type":"string",
-            "description":"The board which the post belongs"
+            "description":"The board to which the post belongs"
         },
         "board_id":{
             "type":"string",
-            "description":"The board id which the post belongs"
-        },
-        "count":{
-            "type":"string",
-            "description": "count"
+            "description":"The board id to which the post belongs"
         },
         "sticky":{
             "type":"boolean",
-            "description": "is sticky"
+            "description": "whether the post should reside at the bottom of the board"
         },
         "mark_sign":{
             "type":"string",
-            "description": "mark sign"
+            "description": "mark sign of a post"
         },
         "repliable":{
             "type":"boolean",
-            "description": "is noreply"
+            "description": "whether the post can be replied"
         },
         "body":{
             "type":"string",
@@ -60,12 +56,18 @@
         },
         "qoute":{
             "type":"string",
-            "description":"qoute of the post, in html format"
+            "description":"post qoute, in html format"
         },
-        "replies":{
-            "type":"object",
-            "description":"reply list of the post",
-            "$ref":"reply.json"
+        "reply_count":{
+            "type":"integer",
+            "description": "reply number of the post"
+        },
+        "reply_list":{
+            "type":"array",
+            "description":"post reply list",
+            "items":{
+                "$ref":"post.json"
+            }
         }
     }
 }

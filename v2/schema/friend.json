@@ -5,7 +5,7 @@
 	"description": "friend",
 	"id": "friend:v2",
 	"properties":{
-		"user_id":{
+		"id":{
 			"type":"string",
 			"description":"user id"
 		},
@@ -22,7 +22,7 @@
 			"description":"last action"
 		},
 		"idle_time":{
-			"type":"integer",
+			"type":"long",
 			"description":"idle time in minutes"
 		},
 		"desc":{

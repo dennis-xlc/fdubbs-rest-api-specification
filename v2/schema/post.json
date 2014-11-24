@@ -32,9 +32,9 @@
         }
       }
     },
-    "date":{
+    "post_time":{
       "type":"date",
-      "description":"The date of the post"
+      "description":"The post time of the post"
     },
     "board":{
       "type":"string",

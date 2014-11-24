@@ -5,45 +5,52 @@
 	"description": "mail detail",
 	"id": "mail:v2",
 	"properties":{
-		"mail_number":{
-			"type":"long",
-			"description": "mail number"
-		},
-		"mail_link":{
+		"id":{
 			"type":"string",
-			"description": "mail link"
+			"description": "The mail id"
 		},
-		"sender":{
+		"link":{
 			"type":"string",
-			"description": "sender id"
-		},
-		"nick":{
-			"type":"string",
-			"description": "sender id"
+			"description": "The link of the mail"
 		},
 		"title":{
 			"type":"string",
-			"description": "sender id"
+			"description": "The title of this mail"
 		},
-		"date":{
-			"type":"string",
-			"description": "sender id"
+		"sender":{
+			"type":"object",
+			"description":"sender of the mail",
+			"id":"poster",
+			"properties":{
+				"name":{
+					"type":"string",
+					"description":"The name of the sender"
+				},
+				"nick":{
+					"type":"string",
+					"description":"The nick of the sender"
+				}
+			}
 		},
-		"source":{
-			"type":"string",
-			"description": "sender id"
-		},
-		"ip":{
-			"type":"string",
-			"description": "sender id"
-		},
-		"is_new":{
+		"unread":{
 			"type":"boolean",
-			"description": "if the mail is new"
+			"description": "'true' if the mail has not read"
 		},
 		"mark_sign":{
 			"type":"string",
-			"description": "mark sign"
+			"description": "The mark sign of the mail"
+		},
+		"source":{
+			"type":"string",
+			"description": "The source of the mail"
+		},
+		"ip_address":{
+			"type":"string",
+			"description": "The ip address of this mail"
+		},
+		"sent_time":{
+			"type":"date",
+			"description": "The sent time of this mail"
 		},
 		"content":{
 			"type":"string",

@@ -1,0 +1,346 @@
+{
+  "kind":"discovery#restDescription",
+  "discoveryVersion":"v1",
+  "id":"fdubbs_rest_api:v1",
+  "name":"fudan bbs rest api",
+  "version":"2.0",
+  "title":"fudan bbs rest api",
+  "description":"fudan bbs rest api",
+  "documentationLink":"../spec.md",
+  "protocol":"rest",
+  "rootUrl":"http://shinify.herokuapp.com/",
+  "servicePath":"api/v2/",
+  "auth":{
+    "oauth2":{
+      "scopes":{
+        "http://shinify.herokuapp.com/oauth2":{
+          "description":"restful api"
+        }
+      }
+    }
+  },
+  "resources":{
+    "profile":{
+      "methods":{
+        "get-profile":{
+          "id": "profile.get",
+          "path": "/profile/:id",
+          "httpMethod":"GET",
+          "authentication": true,
+          "description": "get profile of the specified user",
+          "parameters":{
+            "id":{
+              "type":"string",
+              "required":false,
+              "description":"user id whose profile being loaded, current logined user if absent",
+              "location":"path"
+            },
+            "type":{
+              "type":"string",
+              "enum":["FULL","BASIC", "INTRODUCTION", "SIGNATURE"],
+              "default":"BASIC",
+              "description":"filter by the status of the friend",
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"object",
+            "description":"profile of the specified user",
+            "$ref":"user.json"
+          },
+          "scopes":[
+            "*"
+          ]
+        }
+      }
+    },
+    "friend":{
+      "methods":{
+        "get-friends":{
+          "id": "friends.get",
+          "path": "/friends",
+          "httpMethod":"GET",
+          "authentication": true,
+          "description": "get friends of the current user",
+          "parameters":{
+            "status":{
+              "type":"string",
+              "enum":["ALL","ONLINE"],
+              "default":"ONLINE",
+              "description":"filter by the status of the friend",
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"array",
+            "description":"all friends of the current user",
+            "items":{
+              "type":"object",
+              "$ref":"friend.json"
+            }
+          },
+          "scopes":[
+            "*"
+          ]
+        }
+      }
+    },
+    "mail":{
+      "methods":{
+        "get-mails":{
+          "id": "mails.get",
+          "path": "/mails",
+          "httpMethod":"GET",
+          "authentication": true,
+          "description": "get mails of the current user",
+          "parameters":{
+            "status":{
+              "type":"string",
+              "enum":["ALL","UNREAD"],
+              "default":"UNREAD",
+              "description":"filter by the status of the mail",
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"array",
+            "description":"all mails of the current user",
+            "items":{
+              "type":"object",
+              "$ref":"mail.json"
+            }
+          },
+          "scopes":[
+            "*"
+          ]
+        },
+        "get-mail-detail":{
+          "id": "mail.get",
+          "path": "/mail/:id/:link",
+          "httpMethod":"GET",
+          "authentication": true,
+          "description": "get detail of the mail specified by id",
+          "parameters":{
+            "id":{
+              "type":"string",
+              "required":true,
+              "description":"mail id being loaded",
+              "location":"path"
+            },
+            "link":{
+              "type":"string",
+              "required":true,
+              "description":"mail link being loaded",
+              "location":"path"
+            }
+          },
+          "response":{
+            "type":"object",
+            "description":"detail of the mail specified by id",
+            "$ref":"mail.json"
+          },
+          "scopes":[
+            "*"
+          ]
+        }
+      }
+    },
+    "section":{
+      "methods":{
+        "get-sections":{
+          "id": "sections.get",
+          "path": "/sections",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get all sections",
+          "parameters":{
+          },
+          "response":{
+            "type":"array",
+            "description":"all sections",
+            "items":{
+              "type":"object",
+              "$ref":"section.json"
+            }
+          },
+          "scopes":[
+            "*"
+          ]
+        },
+        "get-board-detail":{
+          "id": "section.get",
+          "path": "/section/:id",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get detail of the section specified by id",
+          "parameters":{
+            "id":{
+              "type":"string",
+              "required":true,
+              "description":"section id being loaded",
+              "location":"path"
+            }
+          },
+          "response":{
+            "type":"object",
+            "description":"detail of the section specified by id",
+            "$ref":"section.json"
+          },
+          "scopes":["*"]
+        }
+      }
+    },
+    "board":{
+      "methods":{
+        "get-boards":{
+          "id": "boards.get",
+          "path": "/boards",
+          "httpMethod":"GET",
+          "authentication": "`true` if type is favorite, otherwise `false`",
+          "description": "get all sections",
+          "parameters":{
+            "type":{
+              "type":"string",
+              "enum":["ALL","FAVORITE"],
+              "default":"ALL",
+              "description":"filter by the type of the board",
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"array",
+            "description":"all boards",
+            "items":{
+              "type":"object",
+              "$ref":"board.json"
+            }
+          },
+          "scopes":[
+            "*"
+          ]
+        }
+      }
+    },
+    "post":{
+      "methods":{
+        "get-top-posts":{
+          "id": "top-posts.get",
+          "path": "/posts/top",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get top posts",
+          "parameters":{
+          },
+          "response":{
+            "type":"array",
+            "description":"top posts",
+            "items":{
+              "type":"object",
+              "$ref":"post.json"
+            }
+          },
+          "scopes":[
+            "*"
+          ]
+        },
+        "get-posts":{
+          "id": "posts.get",
+          "path": "/posts/",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get posts",
+          "parameters":{
+            "loaded_by":{
+              "type":"string",
+              "enum":["BNAME","BID"],
+              "default":"BNAME",
+              "description":"filter by the organize type of the post",
+              "required":false,
+              "location":"query"
+            },
+            "board":{
+              "type":"string",
+              "description":"board name if `loaded_by` value is `BNAME`, board id otherwise",
+              "required":true,
+              "location":"query"
+            },
+            "organized_by":{
+              "type":"string",
+              "enum":["TOPIC","NORMAL"],
+              "default":"TOPIC",
+              "description":"filter by the organize type of the post",
+              "required":false,
+              "location":"query"
+            },
+            "cursor":{
+              "type":"string",
+              "description":"post id from which start to load",
+              "default": "-1",
+              "required":false,
+              "location":"query"
+            },
+            "count":{
+              "type":"integer",
+              "description":"post count per page",
+              "default": 20,
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"array",
+            "description":"posts match all queries",
+            "items":{
+              "type":"object",
+              "$ref":"post.json"
+            }
+          },
+          "scopes":[
+            "*"
+          ]
+        },
+        "get-post-detail":{
+          "id": "post.get",
+          "path": "/post/:id",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get post detail",
+          "parameters":{
+            "id":{
+              "type":"string",
+              "required":true,
+              "description":"post id being loaded",
+              "location":"path"
+            },
+            "loaded_by":{
+              "type":"string",
+              "enum":["BNAME","BID"],
+              "default":"BNAME",
+              "description":"filter by the organize type of the post",
+              "required":false,
+              "location":"query"
+            },
+            "board":{
+              "type":"string",
+              "description":"board name if `loaded_by` value is `BNAME`, board id otherwise",
+              "required":true,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"object",
+            "description":"post detail specified by the id",
+            "$ref":"post.json"
+          },
+          "scopes":[
+            "*"
+          ]
+        }
+      }
+    }
+  }
+}

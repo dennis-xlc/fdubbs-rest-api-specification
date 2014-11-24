@@ -22,7 +22,7 @@
 			"description":"last action"
 		},
 		"idle_time":{
-			"type":"integer",
+			"type":"long",
 			"description":"idle time in minutes"
 		},
 		"desc":{

@@ -1,29 +1,29 @@
 {
-    "type":"object",
-    "$schema":"http://json-schema.org/draft-04/hyper-schema",
-    "name":"section detail",
-    "description":"section detail",
-    "id":"section:v2",
-    "properties":{
-        "id":{
-            "type":"string",
-            "description":"The unique identifier of a section"
-        },
-        "name":{
-            "type":"string",
-            "description":"The name of a section"
-        },
-        "category":{
-            "type":"string",
-            "description":"The category of a section"
-        },
-        "boards":{
-            "type":"array",
-            "description":"all boards belong to the section",
-            "items":{
-                "type":"object",
-                "$ref":"board.json"
-            }
-        }
+  "type":"object",
+  "$schema":"http://json-schema.org/draft-04/hyper-schema",
+  "name":"section detail",
+  "description":"section detail",
+  "id":"section:v2",
+  "properties":{
+    "id":{
+      "type":"string",
+      "description":"The unique identifier of a section"
+    },
+    "name":{
+      "type":"string",
+      "description":"The name of a section"
+    },
+    "category":{
+      "type":"string",
+      "description":"The category of a section"
+    },
+    "boards":{
+      "type":"array",
+      "description":"all boards belong to the section",
+      "items":{
+        "type":"object",
+        "$ref":"board.json"
+      }
     }
+  }
 }

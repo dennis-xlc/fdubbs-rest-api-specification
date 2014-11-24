@@ -1,80 +1,80 @@
 {
-    "type":"object",
-    "$schema":"http://json-schema.org/draft-04/hyper-schema",
-    "name":"post detail",
-    "description":"post detail",
-    "id":"post:v2",
-    "properties":{
-        "id":{
-            "type":"string",
-            "description":"The unique identifier of a post"
+  "type":"object",
+  "$schema":"http://json-schema.org/draft-04/hyper-schema",
+  "name":"post detail",
+  "description":"post detail",
+  "id":"post:v2",
+  "properties":{
+    "id":{
+      "type":"string",
+      "description":"The unique identifier of a post"
+    },
+    "title":{
+      "type":"string",
+      "description":"The title of a post"
+    },
+    "poster":{
+      "type":"object",
+      "description":"poster of the post",
+      "id":"poster",
+      "properties":{
+        "name":{
+          "type":"string",
+          "description":"The name of the poster"
         },
-        "title":{
-            "type":"string",
-            "description":"The title of a post"
+        "nick":{
+          "type":"string",
+          "description":"The nick of the poster"
         },
-        "poster":{
-            "type":"object",
-            "description":"poster of the post",
-            "id":"poster",
-            "properties":{
-                "name":{
-                    "type":"string",
-                    "description":"The name of the poster"
-                },
-                "nick":{
-                    "type":"string",
-                    "description":"The nick of the poster"
-                },
-                "sign":{
-                    "type":"string",
-                    "description":"sign of the poster, in html format"
-                }
-            }
-        },
-        "date":{
-            "type":"date",
-            "description":"The date of the post"
-        },
-        "board":{
-            "type":"string",
-            "description":"The board to which the post belongs"
-        },
-        "board_id":{
-            "type":"string",
-            "description":"The board id to which the post belongs"
-        },
-        "sticky":{
-            "type":"boolean",
-            "description": "whether the post should reside at the bottom of the board"
-        },
-        "mark_sign":{
-            "type":"string",
-            "description": "mark sign of a post"
-        },
-        "repliable":{
-            "type":"boolean",
-            "description": "whether the post can be replied"
-        },
-        "body":{
-            "type":"string",
-            "description":"post body, which in html format",
-            "required":true
-        },
-        "qoute":{
-            "type":"string",
-            "description":"post qoute, in html format"
-        },
-        "reply_count":{
-            "type":"integer",
-            "description": "reply number of the post"
-        },
-        "reply_list":{
-            "type":"array",
-            "description":"post reply list",
-            "items":{
-                "$ref":"post.json"
-            }
+        "sign":{
+          "type":"string",
+          "description":"sign of the poster, in html format"
         }
+      }
+    },
+    "date":{
+      "type":"date",
+      "description":"The date of the post"
+    },
+    "board":{
+      "type":"string",
+      "description":"The board to which the post belongs"
+    },
+    "board_id":{
+      "type":"string",
+      "description":"The board id to which the post belongs"
+    },
+    "sticky":{
+      "type":"boolean",
+      "description": "whether the post should reside at the bottom of the board"
+    },
+    "mark_sign":{
+      "type":"string",
+      "description": "mark sign of a post"
+    },
+    "repliable":{
+      "type":"boolean",
+      "description": "whether the post can be replied"
+    },
+    "body":{
+      "type":"string",
+      "description":"post body, which in html format",
+      "required":true
+    },
+    "qoute":{
+      "type":"string",
+      "description":"post qoute, in html format"
+    },
+    "reply_count":{
+      "type":"integer",
+      "description": "reply number of the post"
+    },
+    "reply_list":{
+      "type":"array",
+      "description":"post reply list",
+      "items":{
+        "$ref":"post.json"
+      }
     }
+  }
 }

@@ -1,141 +1,141 @@
 {
-		"type":"object",
-		"$schema": "http://json-schema.org/draft-04/hyper-schema",
-		"name": "user info",
-		"description": "user info",
-		"id": "user:v2",
-		"properties":{
-				"profile":{
-						"type":"object",
-						"description":"basic profile of the user",
-						"id":"user_basic_profile",
-						"properties":{
-								"id":{
-									"type":"string",
-									"description":"user id"
-								},
-								"nick":{
-									"type":"string",
-									"description":"nick"
-								},
-								"gender":{
-										"type":"string",
-										"description":"gender"
-								},
-								"birth_date":{
-										"type":"object",
-										"description":"user birthday",
-										"id":"user_birth_day",
-										"properties":{
-												"year":{
-														"type":"integer",
-														"description":"year of birth"
-												},
-												"month":{
-														"type":"integer",
-														"description":"month of birth"
-												},
-												"day":{
-														"type":"integer",
-														"description":"day of birth"
-												}
-										}
-								},
-								"is_visible":{
-										"type":"boolean",
-										"description": "is visible"
-								},
-								"is_web":{
-										"type":"boolean",
-										"description": "is login on web"
-								},
-								"introdution":{
-										"type":"string",
-										"description":"user introdution"
-								},
-								"desc":{
-									"type":"string",
-									"description":"desc"
-								},
-								"signature":{
-										"type":"string",
-										"description":"user signature"
-								}
-						}
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/hyper-schema",
+	"name": "user info",
+	"description": "user info",
+	"id": "user:v2",
+	"properties":{
+		"profile":{
+			"type":"object",
+			"description":"basic profile of the user",
+			"id":"user_basic_profile",
+			"properties":{
+				"id":{
+					"type":"string",
+					"description":"user id"
 				},
-				"history":{
-						"type":"object",
-						"description":"history data of the user",
-						"id":"user_history_data",
-						"properties":{
-								"register_date":{
-										"type":"string",
-										"description":"register date of the user"
-								},
-								"idle_time":{
-										"type":"integer",
-										"description":"idle time in minutes"
-								},
-								"online_time":{
-										"type":"integer",
-										"description":"total online time in min"
-								},
-								"post_count":{
-										"type":"integer",
-										"description":"total number of posts"
-								},
-								"login_count":{
-										"type":"integer",
-										"description":"total times of posts"
-								},
-								"last_login_time":{
-										"type":"string",
-										"description":"last login time"
-								},
-								"last_login_ip":{
-										"type":"string",
-										"description":"last login ip"
-								}
+				"nick":{
+					"type":"string",
+					"description":"nick"
+				},
+				"gender":{
+					"type":"string",
+					"description":"gender"
+				},
+				"birth_date":{
+					"type":"object",
+					"description":"user birthday",
+					"id":"user_birth_day",
+					"properties":{
+						"year":{
+							"type":"integer",
+							"description":"year of birth"
+						},
+						"month":{
+							"type":"integer",
+							"description":"month of birth"
+						},
+						"day":{
+							"type":"integer",
+							"description":"day of birth"
 						}
+					}
+				},
+				"is_visible":{
+					"type":"boolean",
+					"description": "is visible"
+				},
+				"is_web":{
+					"type":"boolean",
+					"description": "is login on web"
+				},
+				"introdution":{
+					"type":"string",
+					"description":"user introdution"
+				},
+				"desc":{
+					"type":"string",
+					"description":"desc"
+				},
+				"signature":{
+					"type":"string",
+					"description":"user signature"
+				}
+			}
+		},
+		"history":{
+			"type":"object",
+			"description":"history data of the user",
+			"id":"user_history_data",
+			"properties":{
+				"register_date":{
+					"type":"date",
+					"description":"register date of the user"
+				},
+				"idle_time":{
+					"type":"long",
+					"description":"idle time in minutes"
+				},
+				"online_time":{
+					"type":"long",
+					"description":"total online time in min"
+				},
+				"post_count":{
+					"type":"long",
+					"description":"total number of posts"
+				},
+				"login_count":{
+					"type":"long",
+					"description":"total times of posts"
+				},
+				"last_login_time":{
+					"type":"date",
+					"description":"last login time"
+				},
+				"last_login_ip":{
+					"type":"string",
+					"description":"last login ip"
+				}
+			}
+		},
+		"performance":{
+			"type":"object",
+			"description":"performance of the user",
+			"id":"user_performance",
+			"properties":{
+				"horoscope":{
+					"type":"string",
+					"description":"horoscope"
+				},
+				"ident":{
+					"type":"string",
+					"description":"ident"
 				},
 				"performance":{
-						"type":"object",
-						"description":"performance of the user",
-						"id":"user_performance",
-						"properties":{
-								"horoscope":{
-										"type":"string",
-										"description":"horoscope"
-								},
-								"ident":{
-										"type":"string",
-										"description":"ident"
-								},
-								"performance":{
-										"type":"string",
-										"description":"performance"
-								},
-								"hp":{
-										"type":"integer",
-										"description":"hp"
-								},
-								"level":{
-										"type":"integer",
-										"description":"level"
-								},
-								"repeat":{
-										"type":"integer",
-										"description":"repeat"
-								},
-								"contrib":{
-										"type":"integer",
-										"description":"contrib"
-								},
-								"rank":{
-										"type":"string",
-										"description":"rank"
-								}
-						}
+					"type":"string",
+					"description":"performance"
+				},
+				"hp":{
+					"type":"long",
+					"description":"hp"
+				},
+				"level":{
+					"type":"long",
+					"description":"level"
+				},
+				"repeat":{
+					"type":"long",
+					"description":"repeat"
+				},
+				"contrib":{
+					"type":"long",
+					"description":"contrib"
+				},
+				"rank":{
+					"type":"string",
+					"description":"rank"
 				}
+			}
 		}
+	}
 }

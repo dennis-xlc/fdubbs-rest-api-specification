@@ -1,46 +1,46 @@
 {
-    "type":"object",
-    "$schema":"http://json-schema.org/draft-04/hyper-schema",
-    "name":"board detail",
-    "description":"board detail",
-    "id":"board:v2",
-    "properties":{
-        "id":{
-            "type":"string",
-            "description":"The unique identifier of a board"
-        },
-        "name":{
-            "type":"string",
-            "description":"The name of a board"
-        },
-        "description":{
-            "type":"string",
-            "description":"The description of a board"
-        },
-        "category":{
-            "type":"string",
-            "description":"The category of a board"
-        },
-        "total_posts":{
-            "type":"long",
-            "description":"Total number of posts in the board"
-        },
-        "is_directory":{
-            "type":"boolean",
-            "description":" ‘true’ if the board is a directory. A directory can contain one or more boards."
-        },
-        "has_unread":{
-            "type":"boolean",
-            "description":"‘true’ if the board contains anu unread post for the user, ‘false’ otherwise."
-        },
-        "managers":{
-            "type":"array",
-            "description":"A list of the board manager’s name. A board manager must be a user of the system.",
-            "required":true,
-            "items":{
-                "type":"string",
-                "description":"system user name of the board manager"
-            }
-        }
+  "type":"object",
+  "$schema":"http://json-schema.org/draft-04/hyper-schema",
+  "name":"board detail",
+  "description":"board detail",
+  "id":"board:v2",
+  "properties":{
+    "id":{
+      "type":"string",
+      "description":"The unique identifier of a board"
+    },
+    "name":{
+      "type":"string",
+      "description":"The name of a board"
+    },
+    "description":{
+      "type":"string",
+      "description":"The description of a board"
+    },
+    "category":{
+      "type":"string",
+      "description":"The category of a board"
+    },
+    "total_posts":{
+      "type":"long",
+      "description":"Total number of posts in the board"
+    },
+    "is_directory":{
+      "type":"boolean",
+      "description":" ‘true’ if the board is a directory. A directory can contain one or more boards."
+    },
+    "has_unread":{
+      "type":"boolean",
+      "description":"‘true’ if the board contains anu unread post for the user, ‘false’ otherwise."
+    },
+    "managers":{
+      "type":"array",
+      "description":"A list of the board manager’s name. A board manager must be a user of the system.",
+      "required":true,
+      "items":{
+        "type":"string",
+        "description":"system user name of the board manager"
+      }
     }
+  }
 }

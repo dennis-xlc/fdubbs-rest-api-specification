@@ -71,15 +71,50 @@
               "description":"filter by the status of the friend",
               "required":false,
               "location":"query"
+            },
+            "cursor":{
+              "type":"string",
+              "description":"friend id from which start to load",
+              "default": "-1",
+              "required":false,
+              "location":"query"
+            },
+            "count":{
+              "type":"integer",
+              "description": "count per page",
+              "default": 20,
+              "required":false,
+              "location":"query"
             }
           },
           "response":{
-            "type":"array",
-            "description":"all friends of the current user",
-            "items":{
-              "type":"object",
-              "$ref":"friend.json"
+            "type":"object",
+            "name":"friends",
+            "description":"friends match all queries",
+            "id":"friends",
+            "properties":{
+              "friend_list":{
+                "type":"array",
+                "description":"all friends of the current user",
+                "items":{
+                  "type":"object",
+                  "$ref":"friend.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the friend list"
+              },
+              "next_cursor":{
+                "type":"string",
+                "description":"next cursor"
+              },
+              "previous_cursor":{
+                "type":"string",
+                "description":"previous cursor"
+              }
             }
+            
           },
           "scopes":[
             "*"
@@ -103,15 +138,50 @@
               "description":"filter by the status of the mail",
               "required":false,
               "location":"query"
+            },
+            "cursor":{
+              "type":"string",
+              "description":"mail id from which start to load",
+              "default": "-1",
+              "required":false,
+              "location":"query"
+            },
+            "count":{
+              "type":"integer",
+              "description":"mail count per page",
+              "default": 20,
+              "required":false,
+              "location":"query"
             }
           },
           "response":{
-            "type":"array",
-            "description":"all mails of the current user",
-            "items":{
-              "type":"object",
-              "$ref":"mail.json"
+            "type":"object",
+            "name":"mails",
+            "description":"mails match all queries",
+            "id":"mails",
+            "properties":{
+              "mail_list":{
+                "type":"array",
+                "description":"all mails of the current user",
+                "items":{
+                  "type":"object",
+                  "$ref":"mail.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the mail list"
+              },
+              "next_cursor":{
+                "type":"string",
+                "description":"next cursor"
+              },
+              "previous_cursor":{
+                "type":"string",
+                "description":"previous cursor"
+              }
             }
+            
           },
           "scopes":[
             "*"
@@ -159,18 +229,31 @@
           "parameters":{
           },
           "response":{
-            "type":"array",
-            "description":"all sections",
-            "items":{
-              "type":"object",
-              "$ref":"section.json"
+            "type":"object",
+            "name":"sections",
+            "description":"sections match all queries",
+            "id":"sections",
+            "properties":{
+              "section_list":{
+                "type":"array",
+                "description":"all sections",
+                "items":{
+                  "type":"object",
+                  "$ref":"section.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the section list"
+              }
             }
+            
           },
           "scopes":[
             "*"
           ]
         },
-        "get-board-detail":{
+        "get-section-detail":{
           "id": "section.get",
           "path": "/section/:id",
           "httpMethod":"GET",
@@ -212,11 +295,23 @@
             }
           },
           "response":{
-            "type":"array",
-            "description":"all boards",
-            "items":{
-              "type":"object",
-              "$ref":"board.json"
+            "type":"object",
+            "name":"boards",
+            "description":"boards match all queries",
+            "id":"boards",
+            "properties":{
+              "board_list":{
+                "type":"array",
+                "description":"all boards",
+                "items":{
+                  "type":"object",
+                  "$ref":"board.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the board list"
+              }
             }
           },
           "scopes":[
@@ -236,12 +331,25 @@
           "parameters":{
           },
           "response":{
-            "type":"array",
-            "description":"top posts",
-            "items":{
-              "type":"object",
-              "$ref":"post.json"
+            "type":"object",
+            "name":"posts",
+            "description":"posts match all queries",
+            "id":"posts",
+            "properties":{
+              "post_list":{
+                "type":"array",
+                "description":"top posts",
+                "items":{
+                  "type":"object",
+                  "$ref":"post.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the post list"
+              }
             }
+            
           },
           "scopes":[
             "*"
@@ -292,11 +400,31 @@
             }
           },
           "response":{
-            "type":"array",
+            "type":"object",
+            "name":"posts",
             "description":"posts match all queries",
-            "items":{
-              "type":"object",
-              "$ref":"post.json"
+            "id":"posts",
+            "properties":{
+              "post_list":{
+                "type":"array",
+                "description":"posts match all queries",
+                "items":{
+                  "type":"object",
+                  "$ref":"post.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the post list"
+              },
+              "next_cursor":{
+                "type":"string",
+                "description":"next cursor"
+              },
+              "previous_cursor":{
+                "type":"string",
+                "description":"previous cursor"
+              }
             }
           },
           "scopes":[

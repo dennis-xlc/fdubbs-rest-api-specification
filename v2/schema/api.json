@@ -467,6 +467,80 @@
           "scopes":[
             "*"
           ]
+        },
+        "get-replies":{
+          "id": "replies.get",
+          "path": "/post/:id/reply",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get post detail",
+          "parameters":{
+            "id":{
+              "type":"string",
+              "required":true,
+              "description":"post id being loaded",
+              "location":"path"
+            },
+            "loaded_by":{
+              "type":"string",
+              "enum":["BNAME","BID"],
+              "default":"BID",
+              "description":"filter by the organize type of the post",
+              "required":false,
+              "location":"query"
+            },
+            "board":{
+              "type":"string",
+              "description":"board name if `loaded_by` value is `BNAME`, board id otherwise",
+              "required":true,
+              "location":"query"
+            },
+            "cursor":{
+              "type":"string",
+              "description":"reply id from which start to load",
+              "default": "-1",
+              "required":false,
+              "location":"query"
+            },
+            "count":{
+              "type":"integer",
+              "description":"reply count per page",
+              "default": 20,
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"object",
+            "name":"replies",
+            "description":"replies match all queries",
+            "id":"replies",
+            "properties":{
+              "reply_list":{
+                "type":"array",
+                "description":"replies match all queries",
+                "items":{
+                  "type":"object",
+                  "$ref":"post.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the reply list"
+              },
+              "next_cursor":{
+                "type":"string",
+                "description":"next cursor"
+              },
+              "previous_cursor":{
+                "type":"string",
+                "description":"previous cursor"
+              }
+            }
+          },
+          "scopes":[
+            "*"
+          ]
         }
       }
     }

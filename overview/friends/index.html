@@ -69,9 +69,9 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>name</code></td>
+      <td><code>id</code></td>
       <td><strong>string</strong></td>
-      <td>User name.</td>
+      <td>user id.</td>
     </tr>
     <tr>
       <td><code>nick</code></td>
@@ -79,27 +79,39 @@
       <td>User nick.</td>
     </tr>
     <tr>
-      <td><code>description</code></td>
-      <td><strong>string</strong></td>
-      <td>User description.</td>
-    </tr>
-    <tr>
       <td><code>last_login_ip</code></td>
       <td><strong>string</strong></td>
-      <td>Last login ip.</td>
+      <td>last login ip.</td>
     </tr>
     <tr>
       <td><code>last_action</code></td>
       <td><strong>string</strong></td>
-      <td>Last action.</td>
+      <td>last action.</td>
     </tr>
     <tr>
       <td><code>idle_time</code></td>
+      <td><strong>long</strong></td>
+      <td>idle time in minutes.</td>
+    </tr>
+    <tr>
+      <td><code>desc</code></td>
       <td><strong>string</strong></td>
-      <td>Total idle time.</td>
+      <td>description.</td>
     </tr>
   </tbody>
 </table>
+
+<h3 id="example">Example</h3>
+
+<pre><code>{
+  "id": "xxx",
+  "nick": "xxx",
+  "last_login_ip": "xxx",
+  "last_action": "xxx",
+  "idle_time": 123456,
+  "desc": "xxx"
+}
+</code></pre>
 
     </div>
 
@@ -112,7 +124,6 @@
           <li><a href="/overview/sections/">Object: Sections</a></li>
           <li><a href="/overview/boards/">Object: Boards</a></li>
           <li><a href="/overview/posts/">Object: Posts</a></li>
-          <li><a href="/overview/replies/">Object: Replies</a></li>
           <li><a href="/overview/users/">Object: Users</a></li>
           <li><a href="/overview/friends/">Object: Friends</a></li>
           <li><a href="/overview/mails/">Object: Mails</a></li>

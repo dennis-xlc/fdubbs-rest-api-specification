@@ -69,86 +69,29 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>name</code></td>
-      <td><strong>string</strong></td>
-      <td>User name.</td>
+      <td><code>profile</code></td>
+      <td>(User Profile) <strong>object</strong>
+</td>
+      <td>basic profile of the user.</td>
     </tr>
     <tr>
-      <td><code>nick</code></td>
-      <td><strong>string</strong></td>
-      <td>The nick name of the user.</td>
+      <td><code>history</code></td>
+      <td>(User History) <strong>object</strong>
+</td>
+      <td>history data of the user.</td>
     </tr>
     <tr>
-      <td><code>gender</code></td>
-      <td><strong>string</strong></td>
-      <td>gender.</td>
-    </tr>
-    <tr>
-      <td><code>horoscope</code></td>
-      <td><strong>string</strong></td>
-      <td>Horoscope.</td>
-    </tr>
-    <tr>
-      <td><code>birth_date</code></td>
-      <td><strong>birth_date</strong></td>
-      <td>Birth date of the user.</td>
-    </tr>
-    <tr>
-      <td><code>register_date</code></td>
-      <td><strong>date</strong></td>
-      <td>Register date.</td>
-    </tr>
-    <tr>
-      <td><code>total_online</code></td>
-      <td><strong>long</strong></td>
-      <td>Total online time of the user.</td>
-    </tr>
-    <tr>
-      <td><code>total_posts</code></td>
-      <td><strong>long</strong></td>
-      <td>Total post number of the user.</td>
-    </tr>
-    <tr>
-      <td><code>login_count</code></td>
-      <td><strong>string</strong></td>
-      <td>Total login number of the user.</td>
-    </tr>
-    <tr>
-      <td><code>last_login_ip</code></td>
-      <td><strong>string</strong></td>
-      <td>Last login ip.</td>
-    </tr>
-    <tr>
-      <td><code>last_login_time</code></td>
-      <td><strong>date</strong></td>
-      <td>Last login time.</td>
-    </tr>
-    <tr>
-      <td><code>status</code></td>
-      <td><strong>status</strong></td>
-      <td>User status.</td>
-    </tr>
-    <tr>
-      <td><code>signature</code></td>
-      <td><strong>string</strong></td>
-      <td>User signature.</td>
-    </tr>
-    <tr>
-      <td><code>ident</code></td>
-      <td><strong>string</strong></td>
-      <td>User ident.</td>
-    </tr>
-    <tr>
-      <td><code>introduction</code></td>
-      <td><strong>string</strong></td>
-      <td>User introduction.</td>
+      <td><code>performance</code></td>
+      <td>(User Performance) <strong>object</strong>
+</td>
+      <td>performance of the user.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="birth-date">Birth Date</h3>
+<h3 id="user-profile">User Profile</h3>
 
-<p>Below is the JSON definition of the birth date.</p>
+<p>Below is the JSON definition of the User Profile.</p>
 
 <table>
   <thead>
@@ -160,19 +103,50 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>year</code></td>
-      <td><strong>integer</strong></td>
-      <td>Year of  birth.</td>
+      <td><code>id</code></td>
+      <td><strong>string</strong></td>
+      <td>user id.</td>
     </tr>
     <tr>
-      <td><code>month</code></td>
-      <td><strong>integer</strong></td>
-      <td>Month of  birth.</td>
+      <td><code>nick</code></td>
+      <td><strong>string</strong></td>
+      <td>nick.</td>
     </tr>
     <tr>
-      <td><code>day</code></td>
-      <td><strong>integer</strong></td>
-      <td>Day of birth.</td>
+      <td><code>gender</code></td>
+      <td><strong>string</strong></td>
+      <td>gender.</td>
+    </tr>
+    <tr>
+      <td><code>birth_date</code></td>
+      <td>(Birth Date) <strong>object</strong>
+</td>
+      <td>user birthday.</td>
+    </tr>
+    <tr>
+      <td><code>is_visible</code></td>
+      <td><strong>boolean</strong></td>
+      <td>is visible.</td>
+    </tr>
+    <tr>
+      <td><code>is_web</code></td>
+      <td><strong>boolean</strong></td>
+      <td>is login on web.</td>
+    </tr>
+    <tr>
+      <td><code>introdution</code></td>
+      <td><strong>string</strong></td>
+      <td>user introdution.</td>
+    </tr>
+    <tr>
+      <td><code>desc</code></td>
+      <td><strong>string</strong></td>
+      <td>desc.</td>
+    </tr>
+    <tr>
+      <td><code>signature</code></td>
+      <td><strong>string</strong></td>
+      <td>user signature.</td>
     </tr>
   </tbody>
 </table>
@@ -213,6 +187,88 @@
   </tbody>
 </table>
 
+<h3 id="birth-date">Birth Date</h3>
+
+<p>Below is the JSON definition of the user birthday.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>year</code></td>
+      <td><strong>integer</strong></td>
+      <td>year of birth.</td>
+    </tr>
+    <tr>
+      <td><code>month</code></td>
+      <td><strong>integer</strong></td>
+      <td>month of birth.</td>
+    </tr>
+    <tr>
+      <td><code>day</code></td>
+      <td><strong>integer</strong></td>
+      <td>day of birth.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="user-history">User History</h3>
+
+<p>Below is the JSON definition of the user history data.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>register_date</code></td>
+      <td><strong>date</strong></td>
+      <td>register date of the user.</td>
+    </tr>
+    <tr>
+      <td><code>idle_time</code></td>
+      <td><strong>long</strong></td>
+      <td>idle time in minutes.</td>
+    </tr>
+    <tr>
+      <td><code>online_time</code></td>
+      <td><strong>long</strong></td>
+      <td>total online time in min.</td>
+    </tr>
+    <tr>
+      <td><code>post_count</code></td>
+      <td><strong>long</strong></td>
+      <td>total number of posts.</td>
+    </tr>
+    <tr>
+      <td><code>login_count</code></td>
+      <td><strong>long</strong></td>
+      <td>total times of posts.</td>
+    </tr>
+    <tr>
+      <td><code>last_login_time</code></td>
+      <td><strong>date</strong></td>
+      <td>last login time.</td>
+    </tr>
+    <tr>
+      <td><code>last_login_ip</code></td>
+      <td><strong>string</strong></td>
+      <td>last login ip.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="user-performance">User Performance</h3>
 
 <p>Below is the JSON definition of the user performance.</p>
@@ -227,28 +283,38 @@
   </thead>
   <tbody>
     <tr>
+      <td><code>horoscope</code></td>
+      <td><strong>string</strong></td>
+      <td>horoscope.</td>
+    </tr>
+    <tr>
+      <td><code>ident</code></td>
+      <td><strong>integer</strong></td>
+      <td>ident.</td>
+    </tr>
+    <tr>
       <td><code>performance</code></td>
       <td><strong>string</strong></td>
       <td>User performance.</td>
     </tr>
     <tr>
       <td><code>hp</code></td>
-      <td><strong>integer</strong></td>
+      <td><strong>long</strong></td>
       <td>User hp.</td>
     </tr>
     <tr>
       <td><code>level</code></td>
-      <td><strong>integer</strong></td>
+      <td><strong>long</strong></td>
       <td>User level.</td>
     </tr>
     <tr>
       <td><code>repeat</code></td>
-      <td><strong>integer</strong></td>
+      <td><strong>long</strong></td>
       <td>User repeat.</td>
     </tr>
     <tr>
       <td><code>contrib</code></td>
-      <td><strong>integer</strong></td>
+      <td><strong>long</strong></td>
       <td>User contrib.</td>
     </tr>
     <tr>
@@ -258,6 +324,46 @@
     </tr>
   </tbody>
 </table>
+
+<h3 id="example">Example</h3>
+
+<pre><code>{
+  "profile": {
+  	"id": "xxx",
+  	"nick": "xxx",
+  	"gender": "M",
+  	"birth_date": {
+  		"year": 1988,
+  		"month": 10,
+  		"day": 28
+  	},
+  	"is_visible": true,
+  	"is_web": false,
+  	"introdution": "xxx",
+  	"desc": "xxx",
+  	"signature": "xxx"
+  },
+  "history": {
+  	"register_date": "2014-09-26:00:00:00",
+  	"idle_time": 123456,
+  	"online_time": 123456,
+  	"post_count": 12345,
+  	"login_count": 1234,
+  	"last_login_time": "2014-09-26:00:00:00",
+  	"last_login_ip": "xxx"
+  },
+  "performance": {
+  	"horoscope": "xxx",
+  	"ident": 123,
+  	"performance": "xxx",
+  	"hp": 123456789,
+  	"level": 123,
+  	"repeat": 1234,
+  	"contrib": 12345,
+  	"rank": "xxx"
+  }
+}
+</code></pre>
 
     </div>
 
@@ -270,7 +376,6 @@
           <li><a href="/overview/sections/">Object: Sections</a></li>
           <li><a href="/overview/boards/">Object: Boards</a></li>
           <li><a href="/overview/posts/">Object: Posts</a></li>
-          <li><a href="/overview/replies/">Object: Replies</a></li>
           <li><a href="/overview/users/">Object: Users</a></li>
           <li><a href="/overview/friends/">Object: Friends</a></li>
           <li><a href="/overview/mails/">Object: Mails</a></li>

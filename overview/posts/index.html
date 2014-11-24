@@ -49,7 +49,6 @@
 <ul id="markdown-toc">
   <li><a href="#what-is-a-post-">What is a post ?</a></li>
   <li><a href="#post-definition">Post Definition</a></li>
-  <li><a href="#post-summary-definition">Post Summary Definition</a></li>
 </ul>
 
 <h2 id="what-is-a-post-">What is a post ?</h2>
@@ -70,28 +69,134 @@
     <tr>
       <td><code>id</code></td>
       <td><strong>string</strong></td>
-      <td>The unique identifier of a board</td>
+      <td>The unique identifier of a post</td>
     </tr>
     <tr>
-      <td><code>name</code></td>
+      <td><code>title</code></td>
       <td><strong>string</strong></td>
-      <td>The name of a board</td>
+      <td>The title of a post</td>
     </tr>
     <tr>
-      <td><code>description</code></td>
+      <td><code>poster</code></td>
+      <td>(Poster) <strong>object</strong>
+</td>
+      <td>The poster of a post</td>
+    </tr>
+    <tr>
+      <td><code>post_time</code></td>
+      <td><strong>date</strong></td>
+      <td>The post time of the post</td>
+    </tr>
+    <tr>
+      <td><code>board</code></td>
       <td><strong>string</strong></td>
-      <td>The description of a board</td>
+      <td>The board to which the post belongs</td>
+    </tr>
+    <tr>
+      <td><code>board_id</code></td>
+      <td><strong>string</strong></td>
+      <td>The board id to which the post belongs</td>
+    </tr>
+    <tr>
+      <td><code>sticky</code></td>
+      <td><strong>boolean</strong></td>
+      <td>whether the post should reside at the bottom of the board</td>
+    </tr>
+    <tr>
+      <td><code>mark_sign</code></td>
+      <td><strong>string</strong></td>
+      <td>mark sign of a post</td>
+    </tr>
+    <tr>
+      <td><code>repliable</code></td>
+      <td><strong>boolean</strong></td>
+      <td>whether the post can be replied</td>
+    </tr>
+    <tr>
+      <td><code>body</code></td>
+      <td><strong>string</strong></td>
+      <td>post body, which in html format</td>
+    </tr>
+    <tr>
+      <td><code>qoute</code></td>
+      <td><strong>string</strong></td>
+      <td>post qoute, in html format</td>
+    </tr>
+    <tr>
+      <td><code>reply_count</code></td>
+      <td><strong>integer</strong></td>
+      <td>reply number of the post</td>
+    </tr>
+    <tr>
+      <td><code>reply_list</code></td>
+      <td>(<a href="/overview/posts">post</a>) <strong>array</strong>
+</td>
+      <td>post reply list</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="post-meta-data">Post Meta Data</h3>
+<h3 id="poster">Poster</h3>
 
-<h3 id="post-body">Post Body</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>name</code></td>
+      <td><strong>string</strong></td>
+      <td>The name of the poster</td>
+    </tr>
+    <tr>
+      <td><code>nick</code></td>
+      <td><strong>string</strong></td>
+      <td>The nick of the poster</td>
+    </tr>
+    <tr>
+      <td><code>sign</code></td>
+      <td><strong>string</strong></td>
+      <td>sign of the poster, in html format</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="post-qoute">Post Qoute</h3>
+<h3 id="post-body--qoute">Post Body &amp;&amp; Qoute</h3>
 
-<h2 id="post-summary-definition">Post Summary Definition</h2>
+<h3 id="example">Example</h3>
+
+<pre><code>{
+  "id": "xxx",
+  "title": "xxx",
+  "poster":{
+    "name": "xxx",
+    "nick": "xxx",
+    "sign": "xxx"
+  },
+  "post_time": "2014-09-26:00:00:00",
+  "board": "xxx",
+  "board_id": "xxx",
+  "sticky": false,
+  "mark_sign": "M",
+  "repliable": true,
+  "body": "xxx",
+  "qoute": "xxx",
+  "reply_count": 1234,
+  "reply_list": [
+  	{
+  		...
+  	},
+  	...
+  	{
+  		...
+  	}
+  ]
+}
+</code></pre>
 
     </div>
 
@@ -104,7 +209,6 @@
           <li><a href="/overview/sections/">Object: Sections</a></li>
           <li><a href="/overview/boards/">Object: Boards</a></li>
           <li><a href="/overview/posts/">Object: Posts</a></li>
-          <li><a href="/overview/replies/">Object: Replies</a></li>
           <li><a href="/overview/users/">Object: Users</a></li>
           <li><a href="/overview/friends/">Object: Friends</a></li>
           <li><a href="/overview/mails/">Object: Mails</a></li>

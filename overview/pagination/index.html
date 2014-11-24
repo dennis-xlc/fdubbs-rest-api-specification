@@ -47,6 +47,117 @@
       <h1 id="using-cursors-to-navigate-collections">Using cursors to navigate collections</h1>
 
 
+<h3 id="cursoring">Cursoring</h3>
+
+<p>The Shinify REST API utilizes a technique called <code>cursoring</code> to paginate large result sets. Cursoring separates results into pages (the size of which are defined by the <code>count</code> request parameter) and provides a means to move backwards and forwards through these pages.</p>
+
+<p>To retrieve cursored results, you initially pass a <code>cursor</code> with a value of <code>-1</code> to the endpoint. By default, an API endpoint that supports cursoring will assume <code>-1</code> was passed as cursor if you do not provide one. The response to a cursored request will contain <code>previous_cursor</code>, <code>next_cursor</code>, <code>previous_cursor_str</code> and <code>next_cursor_str</code>. As is the case with most ID values in Shinify’s APIs, the _str values are provided for languages that cannot support large integers (e.g. <code>JavaScript</code>).</p>
+
+<p>The <code>next_cursor</code> is the cursor that you should send to the endpoint to receive the next batch of responses, and the <code>previous_cursor</code> is the cursor that you should send to receive the previous batch. You will know that you have requested the last available page of results when the API responds with a <code>next_cursor = 0</code>.</p>
+
+<h3 id="pseudocode">Pseudocode</h3>
+
+<p>The pseudocode to iterate over all responses from a cursored endpoint is:</p>
+
+<pre><code>cursor = -1
+api_path = "https://shinify.herokuapp.com/api/v1/someCollection"
+
+do {
+	url_with_cursor = api_path + "&amp;cursor=" + cursor
+	response_dictionary = perform_http_get_request_for_url( url_with_cursor )
+	cursor = response_dictionary[ 'next_cursor' ]
+}
+while ( cursor != 0 )
+</code></pre>
+
+<h3 id="example">Example</h3>
+
+<p>Let’s see a real-life example of cursors in action. Consider the common scenario where we want to obtain the list of post reply. Instead of returning all replies in one response set, the endpoint will instead return pages of results.</p>
+
+<h4 id="request">Request</h4>
+
+<pre><code>GET https://shinify.herokuapp.com/api/v1/post/12345/reply
+</code></pre>
+
+<h4 id="response-truncated">Response (truncated)</h4>
+
+<pre><code>{
+	"board_id": "xxx",
+	"post_id": "xxx",
+	"reply_list": [
+		{
+      		...
+      	},
+      	...
+      	{
+      		...
+      	}
+  	],
+  	"next_cursor": 1374004777531007833,
+  	"next_cursor_str": "1374004777531007833",
+  	"previous_cursor": 0,
+  	"previous_cursor_str": "0"
+}
+</code></pre>
+
+<p>We now have a means to move forwards through our dataset, via the <code>next_cursor</code>. To get the next batch of at least 20 results, perform the same request, but set the cursor to the value of the <code>next_cursor</code>.</p>
+
+<h4 id="request-1">Request</h4>
+
+<pre><code>GET https://shinify.herokuapp.com/api/v1/post/12345/reply?cursor=1374004777531007833
+</code></pre>
+
+<h4 id="response-truncated-1">Response (truncated)</h4>
+
+<pre><code>{
+	"board_id": "xxx",
+	"post_id": "xxx",
+	"reply_list": [
+		{
+      		...
+      	},
+      	...
+      	{
+      		...
+      	}
+  	],
+  	"next_cursor": 1323935095007282836,
+  	"next_cursor_str": "1323935095007282836",
+  	"previous_cursor": -1374003371900410561,
+  	"previous_cursor_str": "-1374003371900410561"
+}
+</code></pre>
+
+<p>Notice that we now have a <code>next_cursor</code> as well as a <code>previous_cursor</code>. This means that we can now move back and forth through our results. Let’s keep advancing through the data with the next cursor.</p>
+
+<h4 id="request-2">Request</h4>
+
+<pre><code>GET https://shinify.herokuapp.com/api/v1/post/12345/reply?cursor=1323935095007282836
+</code></pre>
+
+<h4 id="response-truncated-2">Response (truncated)</h4>
+
+<pre><code>{
+	"board_id": "xxx",
+	"post_id": "xxx",
+	"reply_list": [
+		{
+      		...
+      	},
+      	...
+      	{
+      		...
+      	}
+  	],
+  	"next_cursor": 0,
+  	"next_cursor_str": "0",
+  	"previous_cursor": -1323886329961827926,
+  	"previous_cursor_str": "-1323886329961827926"
+}
+</code></pre>
+
+<p>Huzzah. The <code>next_cursor</code> is now 0, which indicates that there are no more remaing pages. We’ve now completed iterating over the post’ reply.</p>
+
     </div>
 
     <div id="js-sidebar" class="sidebar-shell">
@@ -58,7 +169,6 @@
           <li><a href="/overview/sections/">Object: Sections</a></li>
           <li><a href="/overview/boards/">Object: Boards</a></li>
           <li><a href="/overview/posts/">Object: Posts</a></li>
-          <li><a href="/overview/replies/">Object: Replies</a></li>
           <li><a href="/overview/users/">Object: Users</a></li>
           <li><a href="/overview/friends/">Object: Friends</a></li>
           <li><a href="/overview/mails/">Object: Mails</a></li>

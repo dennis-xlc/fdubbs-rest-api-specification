@@ -84,6 +84,12 @@
       <td>The title of this mail.</td>
     </tr>
     <tr>
+      <td><code>sender</code></td>
+      <td>(Mail Sender) <strong>object</strong>
+</td>
+      <td>sender of the mail.</td>
+    </tr>
+    <tr>
       <td><code>unread</code></td>
       <td><strong>boolean</strong></td>
       <td>‘true’ if the mail has not read.</td>
@@ -109,19 +115,35 @@
       <td>The sent time of this mail.</td>
     </tr>
     <tr>
-      <td><code>sender_name</code></td>
-      <td><strong>string</strong></td>
-      <td>The name of the sender.</td>
-    </tr>
-    <tr>
-      <td><code>sender_nick</code></td>
-      <td><strong>string</strong></td>
-      <td>The nick of the sender.</td>
-    </tr>
-    <tr>
       <td><code>content</code></td>
       <td><strong>string</strong></td>
       <td>The content of this mail.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mail-sender">Mail Sender</h3>
+
+<p>Below is the JSON definition of a mail.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>name</code></td>
+      <td><strong>string</strong></td>
+      <td>The name of the sender</td>
+    </tr>
+    <tr>
+      <td><code>nick</code></td>
+      <td><strong>string</strong></td>
+      <td>The nick of the sender</td>
     </tr>
   </tbody>
 </table>
@@ -132,13 +154,15 @@
   "id": "xxx",
   "link": "xxx",
   "title": "xxx",
+  "sender":{
+    "name": "xxx",
+    "nick": "xxx"
+  },
   "unread": true,
   "mark_sign": "+",
   "source": "xxx",
   "ip_address": "xxx",
   "sent_time": "2014-09-26:00:00:00",
-  "sender_name": "xxx",
-  "sender_nick": "xxx",
   "content": "xxx"
 }
 </code></pre>
@@ -154,7 +178,6 @@
           <li><a href="/overview/sections/">Object: Sections</a></li>
           <li><a href="/overview/boards/">Object: Boards</a></li>
           <li><a href="/overview/posts/">Object: Posts</a></li>
-          <li><a href="/overview/replies/">Object: Replies</a></li>
           <li><a href="/overview/users/">Object: Users</a></li>
           <li><a href="/overview/friends/">Object: Friends</a></li>
           <li><a href="/overview/mails/">Object: Mails</a></li>

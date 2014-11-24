@@ -13,17 +13,24 @@
             "type":"string",
             "description":"The title of a post"
         },
-        "owner":{
-            "type":"string",
-            "description":"The owner of a post"
-        },
-        "nick":{
-            "type":"string",
-            "description":"The nick of the post owner"
-        },
-        "sign":{
-            "type":"string",
-            "description":"sign of the post owner, in html format"
+        "poster":{
+            "type":"object",
+            "description":"poster of the post",
+            "id":"poster",
+            "properties":{
+                "name":{
+                    "type":"string",
+                    "description":"The name of the poster"
+                },
+                "nick":{
+                    "type":"string",
+                    "description":"The nick of the poster"
+                },
+                "sign":{
+                    "type":"string",
+                    "description":"sign of the poster, in html format"
+                }
+            }
         },
         "date":{
             "type":"date",

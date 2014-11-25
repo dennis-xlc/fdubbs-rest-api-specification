@@ -1,9 +1,16 @@
 ---
-title: Replies | REST API
+title: Error Code And Responses | REST API
 ---
 
-# Replies
+# Error Code And Responses
 
 * TOC
 {:toc}
+
+
+
+## Error Code
+
+
+## Responses
 

@@ -21,9 +21,21 @@ Below is the JSON definition of a friend.
 
 Field Name | Type | Description
 ------------|------------|------------
-`name` | **string** | User name.
+`id` | **string** | user id.
 `nick` | **string** | User nick.
-`description` | **string** | User description.
-`last_login_ip` | **string** | Last login ip.
-`last_action` | **string** | Last action.
-`idle_time` | **string** | Total idle time.
+`last_login_ip` | **string** | last login ip.
+`last_action` | **string** | last action.
+`idle_time` | **long** | idle time in minutes.
+`desc` | **string** | description.
+
+
+### Example
+
+    {
+      "id": "xxx",
+      "nick": "xxx",
+      "last_login_ip": "xxx",
+      "last_action": "xxx",
+      "idle_time": 123456,
+      "desc": "xxx"
+    }

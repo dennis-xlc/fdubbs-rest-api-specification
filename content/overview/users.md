@@ -21,33 +21,26 @@ Below is the JSON definition of a user.
 
 Field Name | Type | Description
 ------------|------------|------------
-`name` | **string** | User name.
-`nick` | **string** | The nick name of the user.
-`gender` | **string** | gender.
-`horoscope` | **string** | Horoscope.
-`birth_date` | **birth_date** | Birth date of the user.
-`register_date` | **date** | Register date.
-`total_online` | **long** | Total online time of the user.
-`total_posts` | **long** | Total post number of the user.
-`login_count` | **string** | Total login number of the user.
-`last_login_ip` | **string** | Last login ip.
-`last_login_time` | **date** | Last login time.
-`status` | **status** | User status.
-`signature` | **string** | User signature.
-`ident` | **string** | User ident.
-`introduction` | **string** | User introduction.
+`profile` | (User Profile) **object** | basic profile of the user.
+`history` | (User History) **object** | history data of the user.
+`performance` | (User Performance) **object** | performance of the user.
 
 
-### Birth Date
+### User Profile
 
-Below is the JSON definition of the birth date.
+Below is the JSON definition of the User Profile.
 
 Field Name | Type | Description
 ------------|------------|------------
-`year` | **integer** | Year of  birth.
-`month` | **integer** | Month of  birth.
-`day` | **integer** | Day of birth.
-
+`id` | **string** | user id.
+`nick` | **string** | nick.
+`gender` | **string** | gender.
+`birth_date` | (Birth Date) **object** | user birthday.
+`is_visible` | **boolean** | is visible.
+`is_web` | **boolean** | is login on web.
+`introdution` | **string** | user introdution.
+`desc` | **string** | desc.
+`signature` | **string** | user signature.
 
 ### User Status
 
@@ -61,7 +54,30 @@ Field Name | Type | Description
 `description` | **integer** | User description.
 
 
+### Birth Date
 
+Below is the JSON definition of the user birthday.
+
+Field Name | Type | Description
+------------|------------|------------
+`year` | **integer** | year of birth.
+`month` | **integer** | month of birth.
+`day` | **integer** | day of birth.
+
+
+### User History
+
+Below is the JSON definition of the user history data.
+
+Field Name | Type | Description
+------------|------------|------------
+`register_date` | **date** | register date of the user.
+`idle_time` | **long** | idle time in minutes.
+`online_time` | **long** | total online time in min.
+`post_count` | **long** | total number of posts.
+`login_count` | **long** | total times of posts.
+`last_login_time` | **date** | last login time.
+`last_login_ip` | **string** | last login ip.
 
 ### User Performance
 
@@ -69,10 +85,51 @@ Below is the JSON definition of the user performance.
 
 Field Name | Type | Description
 ------------|------------|------------
+`horoscope` | **string** | horoscope.
+`ident` | **integer** | ident.
 `performance` | **string** | User performance.
-`hp` | **integer** | User hp.
-`level` | **integer** | User level.
-`repeat` | **integer** | User repeat.
-`contrib` | **integer** | User contrib.
+`hp` | **long** | User hp.
+`level` | **long** | User level.
+`repeat` | **long** | User repeat.
+`contrib` | **long** | User contrib.
 `rank` | **string** | User rank.
 
+
+### Example
+
+    {
+      "profile": {
+      	"id": "xxx",
+      	"nick": "xxx",
+      	"gender": "M",
+      	"birth_date": {
+      		"year": 1988,
+      		"month": 10,
+      		"day": 28
+      	},
+      	"is_visible": true,
+      	"is_web": false,
+      	"introdution": "xxx",
+      	"desc": "xxx",
+      	"signature": "xxx"
+      },
+      "history": {
+      	"register_date": "2014-09-26:00:00:00",
+      	"idle_time": 123456,
+      	"online_time": 123456,
+      	"post_count": 12345,
+      	"login_count": 1234,
+      	"last_login_time": "2014-09-26:00:00:00",
+      	"last_login_ip": "xxx"
+      },
+      "performance": {
+      	"horoscope": "xxx",
+      	"ident": 123,
+      	"performance": "xxx",
+      	"hp": 123456789,
+      	"level": 123,
+      	"repeat": 1234,
+      	"contrib": 12345,
+      	"rank": "xxx"
+      }
+    }

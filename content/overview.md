@@ -15,11 +15,11 @@ Here are some resources that will help you understand the basic of all our APIs.
 By default, all requests receive the **v1** of the API.
 The version info is embeded in the URL using below format:
 
-    https://rest-api-for-fdubbs.XX.com/api/v1/*
+    https://shinify.herokuapp.com/api/v1/*
 
 ## Schema
 
-All API access is over HTTP, and accessed from the `rest-api-for-fdubbs.XX.com/api/v1`. 
+All API access is over HTTP, and accessed from the `shinify.herokuapp.com/api/v1`. 
 All data is sent and received as JSON.
 
 

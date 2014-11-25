@@ -51,7 +51,7 @@
 
 <p>The Shinify REST API utilizes a technique called <code>cursoring</code> to paginate large result sets. Cursoring separates results into pages (the size of which are defined by the <code>count</code> request parameter) and provides a means to move backwards and forwards through these pages.</p>
 
-<p>To retrieve cursored results, you initially pass a <code>cursor</code> with a value of <code>-1</code> to the endpoint. By default, an API endpoint that supports cursoring will assume <code>-1</code> was passed as cursor if you do not provide one. The response to a cursored request will contain <code>previous_cursor</code>, <code>next_cursor</code>, <code>previous_cursor_str</code> and <code>next_cursor_str</code>. As is the case with most ID values in Shinify’s APIs, the _str values are provided for languages that cannot support large integers (e.g. <code>JavaScript</code>).</p>
+<p>To retrieve cursored results, you initially pass a <code>cursor</code> with a value of <code>-1</code> to the endpoint. By default, an API endpoint that supports cursoring will assume <code>-1</code> was passed as cursor if you do not provide one. The response to a cursored request will contain <code>previous_cursor</code> and <code>next_cursor</code>.</p>
 
 <p>The <code>next_cursor</code> is the cursor that you should send to the endpoint to receive the next batch of responses, and the <code>previous_cursor</code> is the cursor that you should send to receive the previous batch. You will know that you have requested the last available page of results when the API responds with a <code>next_cursor = 0</code>.</p>
 
@@ -93,10 +93,8 @@ while ( cursor != 0 )
       		...
       	}
   	],
-  	"next_cursor": 1374004777531007833,
-  	"next_cursor_str": "1374004777531007833",
-  	"previous_cursor": 0,
-  	"previous_cursor_str": "0"
+  	"next_cursor": "1374004777531007833",
+  	"previous_cursor": "0"
 }
 </code></pre>
 
@@ -121,10 +119,8 @@ while ( cursor != 0 )
       		...
       	}
   	],
-  	"next_cursor": 1323935095007282836,
-  	"next_cursor_str": "1323935095007282836",
-  	"previous_cursor": -1374003371900410561,
-  	"previous_cursor_str": "-1374003371900410561"
+  	"next_cursor": "1323935095007282836",
+  	"previous_cursor": "-1374003371900410561"
 }
 </code></pre>
 
@@ -149,10 +145,8 @@ while ( cursor != 0 )
       		...
       	}
   	],
-  	"next_cursor": 0,
-  	"next_cursor_str": "0",
-  	"previous_cursor": -1323886329961827926,
-  	"previous_cursor_str": "-1323886329961827926"
+  	"next_cursor": "0",
+  	"previous_cursor": "-1323886329961827926"
 }
 </code></pre>
 
@@ -172,11 +166,52 @@ while ( cursor != 0 )
           <li><a href="/overview/users/">Object: Users</a></li>
           <li><a href="/overview/friends/">Object: Friends</a></li>
           <li><a href="/overview/mails/">Object: Mails</a></li>
+          <li><a href="/overview/oauth2/">OAuth2</a></li>
           <li><a href="/overview/pagination/">Using cursors to navigate collections</a></li>
           <li><a href="/overview/errorCodes/">Error Codes & Responses</a></li>
         </ul>
       </li>
-
+      <li class="js-topic">
+        <h3><a href="#" class="js-expand-btn collapsed arrow-btn" data-proofer-ignore></a><a href="/sections/">Sections</a></h3>
+        <ul class="js-guides">
+          <li><a href="/sections/section-list/">Section List</a></li>
+          <li><a href="/sections/section-detail/">Section Detail</a></li>
+        </ul>
+      </li>
+      <li class="js-topic">
+        <h3><a href="#" class="js-expand-btn collapsed arrow-btn" data-proofer-ignore></a><a href="/boards/">Boards</a></h3>
+        <ul class="js-guides">
+          <li><a href="/boards/board-list/">Board List</a></li>
+        </ul>
+      </li>
+      <li class="js-topic">
+        <h3><a href="#" class="js-expand-btn collapsed arrow-btn" data-proofer-ignore></a><a href="/posts/">Posts</a></h3>
+        <ul class="js-guides">
+          <li><a href="/posts/top-post/">Top Post</a></li>
+          <li><a href="/posts/post-list/">Post List</a></li>
+          <li><a href="/posts/post-detail/">Post Detail</a></li>
+          <li><a href="/posts/post-reply/">Post Reply</a></li>
+        </ul>
+      </li>
+      <li class="js-topic">
+        <h3><a href="#" class="js-expand-btn collapsed arrow-btn" data-proofer-ignore></a><a href="/profiles/">Profiles</a></h3>
+        <ul class="js-guides">
+          <li><a href="/profiles/user-profile/">User Profile</a></li>
+        </ul>
+      </li>
+      <li class="js-topic">
+        <h3><a href="#" class="js-expand-btn collapsed arrow-btn" data-proofer-ignore></a><a href="/friends/">Friends</a></h3>
+        <ul class="js-guides">
+          <li><a href="/friends/friend-list/">Friend List</a></li>
+        </ul>
+      </li>
+      <li class="js-topic">
+        <h3><a href="#" class="js-expand-btn collapsed arrow-btn" data-proofer-ignore></a><a href="/mails/">Mails</a></h3>
+        <ul class="js-guides">
+          <li><a href="/mails/mail-list/">Mail List</a></li>
+          <li><a href="/mails/mail-detail/">Mail Detail</a></li>
+        </ul>
+      </li>
     </ul>
   </div> <!-- /sidebar-module -->
   <!--

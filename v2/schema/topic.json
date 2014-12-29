@@ -1,9 +1,9 @@
 {
   "type":"object",
   "$schema":"http://json-schema.org/draft-04/hyper-schema",
-  "name":"post detail",
+  "name":"topic",
   "description":"post detail",
-  "id":"post:v2",
+  "id":"topic:v2",
   "properties":{
     "id":{
       "type":"string",
@@ -22,22 +22,25 @@
       "type":"date",
       "description":"The post time of the post"
     },
-    "sticky":{
-      "type":"boolean",
-      "description": "whether the post should reside at the bottom of the board"
+    "board":{
+      "type":"string",
+      "description":"The board to which the post belongs"
+    },
+    "board_id":{
+      "type":"string",
+      "description":"The board id to which the post belongs"
     },
     "mark_sign":{
       "type":"string",
       "description": "mark sign of a post"
     },
-    "body":{
-      "type":"string",
-      "description":"post body, which in html format",
-      "required":true
+    "repliable":{
+      "type":"boolean",
+      "description": "whether the post can be replied"
     },
-    "qoute":{
-      "type":"string",
-      "description":"post qoute, in html format"
+    "post_count":{
+      "type":"integer",
+      "description": "reply number of the post"
     }
   }
 }

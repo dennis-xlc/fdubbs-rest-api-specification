@@ -1,0 +1,21 @@
+{
+  "type":"object",
+  "$schema":"http://json-schema.org/draft-04/hyper-schema",
+  "name":"poster",
+  "description":"poster",
+  "id":"poster:v2",
+  "properties":{
+    "name":{
+      "type":"string",
+      "description":"The name of the poster"
+    },
+    "nick":{
+      "type":"string",
+      "description":"The nick of the poster"
+    },
+    "sign":{
+      "type":"string",
+      "description":"sign of the poster, in html format"
+    }
+  }
+}

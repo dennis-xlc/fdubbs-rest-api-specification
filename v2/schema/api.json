@@ -322,39 +322,6 @@
     },
     "post":{
       "methods":{
-        "get-top-posts":{
-          "id": "top-posts.get",
-          "path": "/posts/top",
-          "httpMethod":"GET",
-          "authentication": false,
-          "description": "get top posts",
-          "parameters":{
-          },
-          "response":{
-            "type":"object",
-            "name":"posts",
-            "description":"posts match all queries",
-            "id":"posts",
-            "properties":{
-              "post_list":{
-                "type":"array",
-                "description":"top posts",
-                "items":{
-                  "type":"object",
-                  "$ref":"post.json"
-                }
-              },
-              "count":{
-                "type":"integer",
-                "description":"count of the post list"
-              }
-            }
-            
-          },
-          "scopes":[
-            "*"
-          ]
-        },
         "get-posts":{
           "id": "posts.get",
           "path": "/posts/",
@@ -374,14 +341,6 @@
               "type":"string",
               "description":"board name if `loaded_by` value is `BNAME`, board id otherwise",
               "required":true,
-              "location":"query"
-            },
-            "organized_by":{
-              "type":"string",
-              "enum":["TOPIC","NORMAL"],
-              "default":"TOPIC",
-              "description":"filter by the organize type of the post",
-              "required":false,
               "location":"query"
             },
             "cursor":{
@@ -467,24 +426,55 @@
           "scopes":[
             "*"
           ]
-        },
-        "get-replies":{
-          "id": "replies.get",
-          "path": "/post/:id/reply",
+        }
+      }
+    },
+    "topic":{
+      "methods":{
+        "get-top-topics":{
+          "id": "top-topics.get",
+          "path": "/topics/top",
           "httpMethod":"GET",
           "authentication": false,
-          "description": "get post detail",
+          "description": "get top topics",
           "parameters":{
-            "id":{
-              "type":"string",
-              "required":true,
-              "description":"post id being loaded",
-              "location":"path"
-            },
+          },
+          "response":{
+            "type":"object",
+            "name":"topics",
+            "description":"topics match all queries",
+            "id":"topics",
+            "properties":{
+              "topic_list":{
+                "type":"array",
+                "description":"top topics",
+                "items":{
+                  "type":"object",
+                  "$ref":"post.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the topics list"
+              }
+            }
+            
+          },
+          "scopes":[
+            "*"
+          ]
+        },
+        "get-topics":{
+          "id": "topics.get",
+          "path": "/topics/",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get topics",
+          "parameters":{
             "loaded_by":{
               "type":"string",
               "enum":["BNAME","BID"],
-              "default":"BID",
+              "default":"BNAME",
               "description":"filter by the organize type of the post",
               "required":false,
               "location":"query"
@@ -497,14 +487,14 @@
             },
             "cursor":{
               "type":"string",
-              "description":"reply id from which start to load",
+              "description":"post id from which start to load",
               "default": "-1",
               "required":false,
               "location":"query"
             },
             "count":{
               "type":"integer",
-              "description":"reply count per page",
+              "description":"topic count per page",
               "default": 20,
               "required":false,
               "location":"query"
@@ -512,21 +502,21 @@
           },
           "response":{
             "type":"object",
-            "name":"replies",
-            "description":"replies match all queries",
-            "id":"replies",
+            "name":"topics",
+            "description":"topics match all queries",
+            "id":"topics",
             "properties":{
-              "reply_list":{
+              "topic_list":{
                 "type":"array",
-                "description":"replies match all queries",
+                "description":"topics match all queries",
                 "items":{
                   "type":"object",
-                  "$ref":"post.json"
+                  "$ref":"topics.json"
                 }
               },
               "count":{
                 "type":"integer",
-                "description":"count of the reply list"
+                "description":"count of the topics list"
               },
               "next_cursor":{
                 "type":"string",
@@ -537,6 +527,69 @@
                 "description":"previous cursor"
               }
             }
+          },
+          "scopes":[
+            "*"
+          ]
+        },
+        "get-topic-detail":{
+          "id": "topic.get",
+          "path": "/topic/:id",
+          "httpMethod":"GET",
+          "authentication": false,
+          "description": "get topic detail",
+          "parameters":{
+            "id":{
+              "type":"string",
+              "required":true,
+              "description":"topic id being loaded",
+              "location":"path"
+            },
+            "loaded_by":{
+              "type":"string",
+              "enum":["BNAME","BID"],
+              "default":"BNAME",
+              "description":"filter by the organize type of the post",
+              "required":false,
+              "location":"query"
+            },
+            "board":{
+              "type":"string",
+              "description":"board name if `loaded_by` value is `BNAME`, board id otherwise",
+              "required":true,
+              "location":"query"
+            },
+            "cursor":{
+              "type":"string",
+              "description":"post id from which start to load",
+              "default": "-1",
+              "required":false,
+              "location":"query"
+            }
+          },
+          "response":{
+            "type":"object",
+            "description":"posts belongs to the topic",
+            "post_list":{
+                "type":"array",
+                "description":"posts belongs to the topic",
+                "items":{
+                  "type":"object",
+                  "$ref":"posts.json"
+                }
+              },
+              "count":{
+                "type":"integer",
+                "description":"count of the topics list"
+              },
+              "next_cursor":{
+                "type":"string",
+                "description":"next cursor"
+              },
+              "previous_cursor":{
+                "type":"string",
+                "description":"previous cursor"
+              }
           },
           "scopes":[
             "*"

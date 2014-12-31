@@ -565,6 +565,14 @@
               "default": "-1",
               "required":false,
               "location":"query"
+            },
+            "cursor_type":{
+              "type":"string",
+              "enum":["NEXT","PREVIOUS"],
+              "description":"cursor type",
+              "default": "NEXT",
+              "required":false,
+              "location":"query"
             }
           },
           "response":{

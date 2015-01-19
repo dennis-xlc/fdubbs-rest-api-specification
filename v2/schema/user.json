@@ -60,6 +60,14 @@
 				"signature":{
 					"type":"string",
 					"description":"user signature"
+				},
+				"horoscope":{
+					"type":"string",
+					"description":"horoscope"
+				},
+				"ident":{
+					"type":"string",
+					"description":"ident"
 				}
 			}
 		},
@@ -103,14 +111,6 @@
 			"description":"performance of the user",
 			"id":"user_performance",
 			"properties":{
-				"horoscope":{
-					"type":"string",
-					"description":"horoscope"
-				},
-				"ident":{
-					"type":"string",
-					"description":"ident"
-				},
 				"performance":{
 					"type":"string",
 					"description":"performance"
@@ -126,6 +126,10 @@
 				"repeat":{
 					"type":"long",
 					"description":"repeat"
+				},
+				"money":{
+					"type":"long",
+					"description":"money"
 				},
 				"contrib":{
 					"type":"long",

@@ -31,17 +31,9 @@
           "parameters":{
             "id":{
               "type":"string",
-              "required":false,
-              "description":"user id whose profile being loaded, current logined user if absent",
+              "required":true,
+              "description":"user id whose profile being loaded",
               "location":"path"
-            },
-            "type":{
-              "type":"string",
-              "enum":["FULL","BASIC", "INTRODUCTION", "SIGNATURE"],
-              "default":"BASIC",
-              "description":"filter by the status of the friend",
-              "required":false,
-              "location":"query"
             }
           },
           "response":{
